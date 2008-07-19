@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024"
+   height="768"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="mock_up_2.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient2391">
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1;"
+         offset="0"
+         id="stop2393" />
+      <stop
+         style="stop-color:#39371a;stop-opacity:0.81960785;"
+         offset="1"
+         id="stop2395" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2391"
+       id="linearGradient2397"
+       x1="172.81175"
+       y1="87.10968"
+       x2="173.43665"
+       y2="139.58087"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       inkscape:collect="always"
+       id="filter3254">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.52609318"
+         id="feGaussianBlur3256" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2391"
+       id="linearGradient3264"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(6.8181986,0,0,4.8719016,-855.83393,-396.88178)"
+       x1="180.50102"
+       y1="92.187859"
+       x2="181.14323"
+       y2="122.8198" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2391"
+       id="linearGradient3679"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(6.8181986,0,0,4.8719016,-708.67258,-449.07158)"
+       x1="180.50102"
+       y1="92.187859"
+       x2="181.14323"
+       y2="122.8198" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.80078125"
+     inkscape:cx="512"
+     inkscape:cy="384"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1279"
+     inkscape:window-height="949"
+     inkscape:window-x="1"
+     inkscape:window-y="49" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path3230"
+       d="M 140.26953,98.05356 L 158.70703,98.05356 L 158.70703,101.37387 L 144.21484,101.37387 L 144.21484,110.00669 L 158.10156,110.00669 L 158.10156,113.327 L 144.21484,113.327 L 144.21484,123.8934 L 159.05859,123.8934 L 159.05859,127.21372 L 140.26953,127.21372 L 140.26953,98.05356 M 165.58203,98.05356 L 171.46094,98.05356 L 178.90234,117.89731 L 186.38281,98.05356 L 192.26172,98.05356 L 192.26172,127.21372 L 188.41406,127.21372 L 188.41406,101.60825 L 180.89453,121.60825 L 176.92969,121.60825 L 169.41016,101.60825 L 169.41016,127.21372 L 165.58203,127.21372 L 165.58203,98.05356 M 200.11328,98.05356 L 204.05859,98.05356 L 204.05859,123.8934 L 218.25781,123.8934 L 218.25781,127.21372 L 200.11328,127.21372 L 200.11328,98.05356"
+       style="font-size:40px;font-style:normal;font-weight:normal;opacity:0.49137932;fill:#00006f;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter3254);font-family:Bitstream Vera Sans"
+       transform="matrix(6.8181986,0,0,4.8719016,-703.4301,-441.98603)" />
+    <path
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:url(#linearGradient3679);fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       d="M 247.71293,28.63572 L 373.42347,28.63572 L 373.42347,44.811944 L 274.61284,44.811944 L 274.61284,86.870191 L 369.29525,86.870191 L 369.29525,103.04641 L 274.61284,103.04641 L 274.61284,154.52487 L 375.82047,154.52487 L 375.82047,170.70115 L 247.71293,170.70115 L 247.71293,28.63572 M 420.29858,28.63572 L 460.38216,28.63572 L 511.1191,125.31251 L 562.12243,28.63572 L 602.20601,28.63572 L 602.20601,170.70115 L 575.9719,170.70115 L 575.9719,45.953821 L 524.70225,143.39185 L 497.66918,143.39185 L 446.39953,45.953821 L 446.39953,170.70115 L 420.29858,170.70115 L 420.29858,28.63572 M 655.7395,28.63572 L 682.63941,28.63572 L 682.63941,154.52487 L 779.45251,154.52487 L 779.45251,170.70115 L 655.7395,170.70115 L 655.7395,28.63572"
+       id="flowRoot2383" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#0000a4;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="249.33243"
+       y="230.97008"
+       id="text3266"><tspan
+         sodipodi:role="line"
+         id="tspan3268"
+         x="249.33243"
+         y="230.97008">WORK</tspan></text>
+    <text
+       id="text3270"
+       y="230.98961"
+       x="678.45105"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#960000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="230.98961"
+         x="678.45105"
+         id="tspan3272"
+         sodipodi:role="line">PLAY</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="500.83508"
+       y="230.97008"
+       id="text3274"><tspan
+         sodipodi:role="line"
+         id="tspan3276"
+         x="500.83508"
+         y="230.97008">US</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:19.35416794px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="219.23343"
+       y="703.61157"
+       id="text3662"><tspan
+         sodipodi:role="line"
+         id="tspan3664"
+         x="219.23343"
+         y="703.61157">info@emlprime.com</tspan></text>
+    <text
+       id="text3666"
+       y="705.31732"
+       x="499.87268"
+       style="font-size:19.35416794px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="705.31732"
+         x="499.87268"
+         id="tspan3668"
+         sodipodi:role="line">884.448.2304</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:19.35416794px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="679.23334"
+       y="705.48743"
+       id="text3670"><tspan
+         sodipodi:role="line"
+         id="tspan3672"
+         x="679.23334"
+         y="705.48743">© 2008 EMLPrime </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:153.88752747px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Charter;-inkscape-font-specification:Bitstream Charter"
+       x="427.03665"
+       y="-560.17334"
+       id="text3674"
+       sodipodi:linespacing="125%"
+       transform="matrix(1.0715379,0.9077285,-0.4602702,0.5433309,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3676"
+         x="427.03665"
+         y="-560.17334">'</tspan></text>
+  </g>
+</svg>
