@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD/ XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+	<title>EMLPrime</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-859-1" />
+	<link rel="stylesheet" type="text/css" href="/media/css/site.css" />
+  </head>
+  <body>
+	<a href="/">
+	<div id="header">
+	  {% block header %}
+	  <h1>EML'</h1>
+	  {% endblock header %}
+	</div>
+	</a>
+	<div id="logo">
+	  <a href="/"><img id="logo" src="/media/images/logo.png" alt="EMLPrime" /></a>
+	</div>
+	<div id="navigation">
+	  <a href="/work/"><img id="work" src="/media/images/work.png" alt="Work" /></a>
+	  <a href="/us/"><img id="us" src="/media/images/us.png" alt="Us" /></a>
+	  <a href="/play/"><img id="play" src="/media/images/play.png" alt="Play" /></a>
+	</div>
+	<div id="content">
+	  {% block content %}
+	  {% endblock content %}
+	</div>
+	</div>
+  </body>
+</html>

@@ -3,6 +3,8 @@ from emlprime.settings import MEDIA_ROOT
 
 urlpatterns = patterns('django.views.generic.simple',
     (r'^$', 'direct_to_template', {'template': 'index.html'}),
+    (r'^work/$', 'direct_to_template', {'template': 'work.html'}),
+    (r'^us/$', 'direct_to_template', {'template': 'us.html'}),
 )
 
 urlpatterns += patterns('',
