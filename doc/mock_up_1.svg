@@ -47,6 +47,21 @@
   <defs
      id="defs4">
     <linearGradient
+       id="linearGradient3995">
+      <stop
+         style="stop-color:#e8f1f7;stop-opacity:1;"
+         offset="0"
+         id="stop3997" />
+      <stop
+         id="stop4015"
+         offset="0.5"
+         style="stop-color:#afd4ed;stop-opacity:1;" />
+      <stop
+         style="stop-color:#76b8e4;stop-opacity:1;"
+         offset="1"
+         id="stop4013" />
+    </linearGradient>
+    <linearGradient
        id="linearGradient5888">
       <stop
          style="stop-color:#ff0000;stop-opacity:1;"
@@ -554,6 +569,15 @@
        y1="41.241055"
        x2="991.94385"
        y2="41.241055" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3995"
+       id="linearGradient4001"
+       x1="-154.67616"
+       y1="-78.373436"
+       x2="1496.2821"
+       y2="743.52435"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <metadata
      id="metadata7">
@@ -567,11 +591,19 @@
     </rdf:RDF>
   </metadata>
   <g
-     sodipodi:insensitive="true"
      style="display:inline"
      id="layer1"
      inkscape:groupmode="layer"
-     inkscape:label="Background" />
+     inkscape:label="Background"
+     sodipodi:insensitive="true">
+    <rect
+       style="opacity:1;fill:url(#linearGradient4001);fill-opacity:1;stroke:#000400;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3223"
+       width="1202.7028"
+       height="804.05408"
+       x="-1.3513514"
+       y="1.3513514" />
+  </g>
   <g
      style="display:inline"
      inkscape:label="Logo"
@@ -635,7 +667,8 @@
      sodipodi:insensitive="true"
      inkscape:label="Nav_Bar"
      id="layer3"
-     inkscape:groupmode="layer">
+     inkscape:groupmode="layer"
+     style="display:inline">
     <g
        transform="translate(9.4594595,-14.864865)"
        id="g5527">
@@ -681,7 +714,8 @@
      sodipodi:insensitive="true"
      inkscape:label="Footer"
      id="layer4"
-     inkscape:groupmode="layer">
+     inkscape:groupmode="layer"
+     style="display:inline">
     <g
        transform="translate(2.7027027,-2.7027027)"
        id="g5580">
@@ -726,7 +760,7 @@
      id="layer5"
      inkscape:groupmode="layer"
      sodipodi:insensitive="true"
-     style="display:inline">
+     style="display:none">
     <rect
        ry="0"
        y="256.75674"
