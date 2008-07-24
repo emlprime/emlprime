@@ -14,6 +14,39 @@ body
                 text-align: center;
 }
 
+#header
+{
+margin-left: -10000px;
+}
+
+#navigation
+{
+width: 800px;
+height: 35px;
+position: relative;
+}
+
+#work, #us, #play
+{
+position: absolute;
+top: 0px;
+}
+
+#work
+{
+left: 10px;
+}
+
+#play
+{
+right: 10px;
+}
+
+#us
+{
+left: 380px;
+}
+
 #content
 {
 				margin: auto;
@@ -33,36 +66,65 @@ a
 
 #snippets
 {
+  position: relative;
 				padding: 2em;
-				outline: 1px solid blue;
 }
 
 #work_snippet, #us_snippet, #play_snippet
 {
 				width: 200px;
-				outline: 1px solid black;
 }
 
 #work_snippet
 {
-				color: red;
-				position: relative;
+				position: absolute;
 				left: 0px;
 				top: 0px;
 }
 
 #us_snippet
 {
-				color: blue;
-				position: relative;
-				left: 280px;
+				position: absolute;
+				left: 300px;
 				top: 0px;
 }
 
 #play_snippet
 {
-				color: green;
-				position: relative;
-				left: 560px;
+				position: absolute;
+				left: 600px;
 				top: 0px;
+}
+}
+
+#profiles
+{
+outline: 1px solid red;
+width: 800px;
+height: 600px;
+}
+
+#peter
+{
+padding: 1em;
+width: 350px;
+height: 500px;
+text-align: left;
+float: left;
+}
+
+#laura
+{
+padding: 1em;
+width: 350px;
+height: 500px;
+text-align: left;
+float: right;
+}
+
+#laura_image
+{
+height: 150px;
+outline: 1px solid black;
+margin-left: 60px;
 }

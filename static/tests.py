@@ -17,7 +17,7 @@ class TestStory(CommonTestCase):
         doc = alice.clicks_a_link("/", templates_used=templates_used)
         # see the page with the logo
         logo = doc.find(id="logo")
-        self.failUnlessEqual(logo["alt"], "EMLPrime", "Could not find %s" % EMLPrime)
+        self.failUnlessEqual(logo.find('img')["alt"], "EMLPrime")
         logo_image = doc.find(id="logo").find(src="/media/images/logo.png")
         self.failUnless(logo_image, "Could not find %s" % logo.png)
         # see the navigation links
@@ -63,6 +63,8 @@ class TestStory(CommonTestCase):
         # submit a project request using the form
         self.alice.sees_a_form(doc, "project")
         self.alice.sees_a_submit_button(doc, "project")
+        self.alice.submits_a_form(doc, "project", {'name':'test', 'email':'test@emlprime.com', 'description':'test project'})
+        self.failUnlessEqual(Project.objects.get().name, 'test')
 
     def test_us_page(self):
         """ Alice goes to www.emlprime.com and follows the link to the us page

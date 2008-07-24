@@ -25,7 +25,7 @@
      gridtolerance="10000"
      guidetolerance="10"
      objecttolerance="10"
-     inkscape:pageopacity="0.98431373"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.685"
      inkscape:cx="598.54015"
@@ -577,7 +577,8 @@
        y1="-78.373436"
        x2="1496.2821"
        y2="743.52435"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.1647559,0,0,2.0900311e-2,-196.66376,5.7145024e-2)" />
   </defs>
   <metadata
      id="metadata7">
@@ -594,24 +595,28 @@
      style="display:inline"
      id="layer1"
      inkscape:groupmode="layer"
-     inkscape:label="Background"
-     sodipodi:insensitive="true">
+     inkscape:label="Background">
     <rect
-       style="opacity:1;fill:url(#linearGradient4001);fill-opacity:1;stroke:#000400;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:url(#linearGradient4001);fill-opacity:1;stroke:#000400;stroke-width:0.46807462;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect3223"
-       width="1202.7028"
-       height="804.05408"
-       x="-1.3513514"
-       y="1.3513514" />
+       width="1400.8551"
+       height="16.804981"
+       x="-198.23775"
+       y="0.08538869"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
   <g
      style="display:inline"
      inkscape:label="Logo"
      id="layer2"
-     inkscape:groupmode="layer"
-     sodipodi:insensitive="true">
+     inkscape:groupmode="layer">
     <g
-       id="g2775">
+       id="g2775"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/logo.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <text
          xml:space="preserve"
          style="font-size:170.94070435px;font-style:normal;font-weight:normal;fill:url(#linearGradient5471);fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline;filter:url(#filter5272);font-family:Bitstream Vera Sans"
@@ -664,54 +669,57 @@
     </g>
   </g>
   <g
-     sodipodi:insensitive="true"
      inkscape:label="Nav_Bar"
      id="layer3"
      inkscape:groupmode="layer"
      style="display:inline">
-    <g
-       transform="translate(9.4594595,-14.864865)"
-       id="g5527">
-      <flowRoot
-         xml:space="preserve"
-         id="flowRoot5414"
-         style="font-size:40px;font-style:normal;font-weight:normal;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-         transform="translate(-3.1862656,-5.147414)"><flowRegion
-           id="flowRegion5416"><rect
-             id="rect5418"
-             width="161.99722"
-             height="73.231621"
-             x="175.31207"
-             y="184.18863"
-             style="fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-opacity:1" /></flowRegion><flowPara
-           id="flowPara5420">Work</flowPara></flowRoot>      <flowRoot
-         xml:space="preserve"
-         id="flowRoot5422"
-         style="font-size:40px;font-style:normal;font-weight:normal;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-         transform="translate(86.687354,-4.6688983)"><flowRegion
-           id="flowRegion5424"><rect
-             id="rect5426"
-             width="205.27046"
-             height="66.574203"
-             x="456.03329"
-             y="183.07906"
-             style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-opacity:1" /></flowRegion><flowPara
-           id="flowPara5428">Us</flowPara></flowRoot>      <flowRoot
-         xml:space="preserve"
-         id="flowRoot5430"
-         style="font-size:40px;font-style:normal;font-weight:normal;fill:#005a00;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-         transform="translate(35.135181,-3.4931171)"><flowRegion
-           id="flowRegion5432"><rect
-             id="rect5434"
-             width="180.85992"
-             height="82.108185"
-             x="835.50623"
-             y="178.64078"
-             style="fill:#005a00;fill-opacity:1;stroke:#000000;stroke-opacity:1" /></flowRegion><flowPara
-           id="flowPara5436">Play</flowPara></flowRoot>    </g>
-  </g>
+    <flowRoot
+       transform="translate(6.2731939,-20.012279)"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       id="flowRoot5414"
+       xml:space="preserve"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/work.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><flowRegion
+         id="flowRegion5416"><rect
+           style="fill:#0000ff;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+           y="184.18863"
+           x="175.31207"
+           height="73.231621"
+           width="161.99722"
+           id="rect5418" /></flowRegion><flowPara
+         id="flowPara5420">Work</flowPara></flowRoot>    <flowRoot
+       transform="translate(96.146813,-19.533763)"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       id="flowRoot5422"
+       xml:space="preserve"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/us.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><flowRegion
+         id="flowRegion5424"><rect
+           style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+           y="183.07906"
+           x="456.03329"
+           height="66.574203"
+           width="205.27046"
+           id="rect5426" /></flowRegion><flowPara
+         id="flowPara5428">Us</flowPara></flowRoot>    <flowRoot
+       transform="translate(44.594641,-18.357982)"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#005a00;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       id="flowRoot5430"
+       xml:space="preserve"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/play.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><flowRegion
+         id="flowRegion5432"><rect
+           style="fill:#005a00;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+           y="178.64078"
+           x="835.50623"
+           height="82.108185"
+           width="180.85992"
+           id="rect5434" /></flowRegion><flowPara
+         id="flowPara5436">Play</flowPara></flowRoot>  </g>
   <g
-     sodipodi:insensitive="true"
      inkscape:label="Footer"
      id="layer4"
      inkscape:groupmode="layer"
@@ -759,8 +767,7 @@
      inkscape:label="Work"
      id="layer5"
      inkscape:groupmode="layer"
-     sodipodi:insensitive="true"
-     style="display:none">
+     style="display:inline">
     <rect
        ry="0"
        y="256.75674"
@@ -788,7 +795,10 @@
        ry="0" />
     <g
        id="g5615"
-       transform="matrix(0.6063341,0,0,0.6023221,26.20538,170.58066)">
+       transform="matrix(0.6063341,0,0,0.6023221,26.20538,170.58066)"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/arrow_top.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <g
          transform="matrix(0.7029872,0,0,0.6364526,809.49081,78.27678)"
          id="g5611">
@@ -819,7 +829,10 @@
     </g>
     <g
        id="g5853"
-       transform="translate(-12.162162,24.999963)">
+       transform="translate(-12.162162,24.999963)"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/arrow_right.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <path
          sodipodi:type="star"
          style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -854,7 +867,10 @@
     </g>
     <g
        id="g5857"
-       transform="matrix(-1,0,0,-1,1145.7124,1052.4399)">
+       transform="matrix(-1,0,0,-1,1145.7124,1052.4399)"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/arrow_left.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <path
          transform="translate(40.540541,141.89189)"
          d="M 249.99999,472.97297 L 175.37508,470.11174 L 215.16544,406.91529 L 249.99999,472.97297 z"

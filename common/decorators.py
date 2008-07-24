@@ -5,7 +5,7 @@ from django.shortcuts import render_to_response
 from django.template.loader import render_to_string
 from django.template import RequestContext
 
-from taskmaster.common import is_ajax, single_display_session_values
+from emlprime.common import is_ajax, single_display_session_values
 
 AJAX_KEYS = ['ids_to_replace', 'error_message', 'status_message', 'id_created', 'id_deleted', 'focus', 'redirect_url']
 
