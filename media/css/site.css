@@ -26,6 +26,35 @@ height: 35px;
 position: relative;
 }
 
+#footer
+{
+width: 800px;
+position: relative;
+}
+
+#email, #phone_number, #copyright
+{
+position: absolute;
+top: 0px;
+}
+
+#phone_number
+{
+left: 360px;
+}
+
+#copyright
+{
+right: 0px;
+}
+
+#index
+{
+width: 800px;
+height: 400px;
+position: relative;
+}
+
 #work, #us, #play
 {
 position: absolute;
@@ -90,6 +119,52 @@ a
 #play_snippet
 {
 				left: 600px;
+}
+
+#cycle
+{
+outline: 1px solid blue;
+position: relative;
+width: 800px;
+height: 400px;
+}
+
+#initial_conversation, #sprint_cycle, #approval_cycle
+{
+outline: 1px solid black;
+width: 300px;
+position: absolute
+}
+
+#initial_conversation
+{
+top: 0px;
+left: 250px;
+}
+
+#arrow_top
+{
+outline: 1px solid red;
+position: absolute;
+top: 70px;
+left: 375px;
+}
+
+#sprint_cycle
+{
+left: 250px;
+top: 150px;
+}
+
+#arrow_right
+{
+
+}
+
+#approval_cycle
+{
+left: 250px;
+bottom: 0px;
 }
 
 .projects

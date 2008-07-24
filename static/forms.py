@@ -11,5 +11,5 @@ class ProjectForm(ModelForm):
         model = Project
 
     def save(self, commit=True):
-        project = super(PromptForm, self).save()
+        project = super(ProjectForm, self).save()
         return project

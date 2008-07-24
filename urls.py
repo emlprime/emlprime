@@ -9,4 +9,6 @@ urlpatterns = patterns('django.views.generic.simple',
 urlpatterns += patterns('',
     (r'^media/(.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
     (r'^work/$', 'emlprime.views.detail'),
+    (r'^work/create/$', 'emlprime.views.confirmation'),
+    (r'^project/create/$', 'emlprime.views.detail'),
 )

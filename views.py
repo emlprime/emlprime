@@ -1,4 +1,5 @@
 from django.http import HttpResponseRedirect
+from django.core.mail import mail_admins
 
 from emlprime.static.models import Project
 from emlprime.static.forms import ProjectForm
@@ -13,10 +14,24 @@ def detail(request):
         values = request.POST.copy()
         form = ProjectForm(values)
         if form.is_valid():
-            project.save()
-            return HttpResponseRedirect("/work/")
+            project=form.save()
+#            mail_admins('Project Request Submitted', 'project.name, project.email, project.description', fail_silently=False)
+            return HttpResponseRedirect("/work/create/")
         else:
             errors=form.errors
     else:
         form = ProjectForm()
+    return locals()
+
+@ajax_or_http_response
+def create(request):
+    """ Redirects to thank-you page following project object creation
+    """
+    return HttpResponseRedirect("/work/create/")
+
+@ajax_or_http_response
+def confirmation(request):
+    """ Confirms the project request
+    """
+    template = "project_create.html"
     return locals()

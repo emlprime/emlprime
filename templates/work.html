@@ -1,12 +1,18 @@
-{% include base.html %}
+{% extends "base.html" %}
 {% block content %}
 <div id="cycle">
   <div id="initial_conversation">
+    <p>You present your idea to us.  We work with you to make a backlog of all the features you want.</p>
   </div>
+  <img src="/media/images/arrow_top.png" class="arrow" id="arrow_top" />
   <div id="sprint_cycle">
+    <p>You decide which features are most important to you right away.  We make a two- or four-week cycle, during which we implement those features.</p>
   </div>
+  <img src="/media/images/arrow_right.png" class="arrow" id="arrow_right" />
   <div id="approval_cycle">
+    <p>You review our work and check to see that each feature is implemented the way you want it.  We get paid, and we work with you to choose the features for the next sprint.</p>
   </div>
+  <img src="/media/images/arrow_left.png" class="arrow" id="arrow_left" />
 </div>
 <form method="post" id="project_form" action="/project/create/">
   {{ form.as_p }}

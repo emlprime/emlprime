@@ -1,4 +1,5 @@
 from emlprime.common.tests import CommonTestCase
+from emlprime.static.models import Project
 
 from django.core import management
 from django.conf import settings
@@ -77,6 +78,7 @@ class TestStory(CommonTestCase):
         self.alice.submits_a_form(doc, "project", {'name':'test', 'email':'test@emlprime.com', 'description':'test project'})
         self.failUnlessEqual(Project.objects.get().name, 'test')
 
+
     def test_us_page(self):
         """ Alice goes to www.emlprime.com and follows the link to the us page
 
@@ -93,8 +95,6 @@ class TestStory(CommonTestCase):
         self.failUnless(personal_info, "Could not find %s" % personal_info)
         experience = doc.find(id="experience")
         self.failUnless(experience, "Could not find %s" % experience)
-        role = doc.find(id="role")
-        self.failUnless(role, "Could not find %s" % role)
         personality = doc.find(id="personality")
         self.failUnless(personality, "Could not find %s" % personality)
         hobbies = doc.find(id="hobbies")
@@ -102,7 +102,7 @@ class TestStory(CommonTestCase):
         # see the name, email, and favorite bribe in the personal info section
         name = doc.find(id="personal_info").find(id="name")
         self.failUnless(name, "Could not find %s" % name)
-        email = doc.find(id="personal_info").find(id="email")
+        email = doc.find(id="personal_info").find(id="contact_email")
         self.failUnless(email, "Could not find %s" % email)
         favorite_bribe = doc.find(id="personal_info").find(id="favorite_bribe")
         self.failUnless(favorite_bribe, "Could not find %s" % favorite_bribe)
@@ -113,15 +113,4 @@ class TestStory(CommonTestCase):
         self.failUnless(skills, "Could not find %s" % skills)
         finished_projects = doc.find(id="experience").find(id="finished_projects")
         self.failUnless(finished_projects, "Could not find %s" % finished_projects)
-        # see the roles outlined in the role div
-        testing = doc.find(id="role").find(id="testing")
-        self.failUnless(testing, "Could not find %s" % testing)
-        design = doc.find(id="role").find(id="design")
-        self.failUnless(design, "Could not find %s" % design)
-        customer_relations = doc.find(id="role").find(id="customer_relations")
-        self.failUnless(customer_relations, "Could not find %s" % customer_relations)
-        coding = doc.find(id="role").find(id="coding")
-        self.failUnless(coding, "Could not find %s" % coding)
-        communication = doc.find(id="role").find(id="communication")
-        self.failUnless(communication, "Could not find %s" % communication)
 
