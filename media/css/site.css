@@ -72,34 +72,34 @@ a
 
 #work_snippet, #us_snippet, #play_snippet
 {
+				position: absolute;
 				width: 200px;
+				top: 0px;
 }
 
 #work_snippet
 {
-				position: absolute;
 				left: 0px;
-				top: 0px;
 }
 
 #us_snippet
 {
-				position: absolute;
 				left: 300px;
-				top: 0px;
 }
 
 #play_snippet
 {
-				position: absolute;
 				left: 600px;
-				top: 0px;
 }
+
+.projects
+{
+list-style-type: none;
 }
+
 
 #profiles
 {
-outline: 1px solid red;
 width: 800px;
 height: 600px;
 }
