@@ -78,6 +78,52 @@ class TestStory(CommonTestCase):
         self.alice.submits_a_form(doc, "project", {'name':'test', 'email':'test@emlprime.com', 'description':'test project'})
         self.failUnlessEqual(Project.objects.get().name, 'test')
 
+    def test_workflow_page(self):
+        """ Alice goes to www.emlprime.com/work and clicks on the link to the sample workflow
+        
+        she should...
+        """
+        alice = self.alice
+        # see the page
+        templates_used = ["sample_workflow.html"]
+        doc = alice.clicks_a_link("/work/sample_workflow/", templates_used=templates_used)
+        # see the divs for the initial stage, sprint cycle, and approval cycle
+        initial_stage=doc.find(id="workflow_initial_stage")
+        self.failUnless(initial_stage, "could not find initial stage")
+        sprint_cycle=doc.find(id="workflow_sprint_cycle")
+        self.failUnless(sprint_cycle, "could not find sprint cycle")
+        approval_cycle=doc.find(id="workflow_approval_cycle")
+        self.failUnless(approval_cycle, "could not find approval cycle")
+        # see the great idea, transformation, and initial sprint divs inside the initial stage
+        great_idea=doc.find(id="workflow_initial_stage").find(id="great_idea")
+        self.failUnless(great_idea, "could not find great_idea")
+        transformation=doc.find(id="workflow_initial_stage").find(id="transformation")
+        self.failUnless(transformation, "could not find transformation")
+        initial_sprint=doc.find(id="workflow_initial_stage").find(id="initial_sprint")
+        self.failUnless(initial_sprint, "could not find initial_sprint")
+        # see the assign sprint, write tests, write code, update burndown, and present stories inside the sprint cycle
+        assign_sprint_tasks=doc.find(id="workflow_sprint_cycle").find(id="assign_sprint_tasks")
+        self.failUnless(assign_sprint_tasks, "could not find assign_sprint_tasks")
+        write_tests=doc.find(id="workflow_sprint_cycle").find(id="write_tests")
+        self.failUnless(write_tests, "could not find write_tests")
+        write_code=doc.find(id="workflow_sprint_cycle").find(id="write_code")
+        self.failUnless(write_code, "could not find write_code")
+        update_burndown=doc.find(id="workflow_sprint_cycle").find(id="update_burndown")
+        self.failUnless(update_burndown, "could not find update_burndown")
+        present_stories=doc.find(id="workflow_sprint_cycle").find(id="present_stories")
+        self.failUnless(present_stories, "could not find present_stories")
+        # see the story approval, get paid, add ideas, groom backlog, and design next sprint inside the approval cycle
+        story_approval=doc.find(id="workflow_approval_cycle").find(id="story_approval")
+        self.failUnless(story_approval, "could not find story_approval")
+        get_paid=doc.find(id="workflow_approval_cycle").find(id="get_paid")
+        self.failUnless(get_paid, "could not find get_paid")
+        add_ideas=doc.find(id="workflow_approval_cycle").find(id="add_ideas")
+        self.failUnless(add_ideas, "could not find add_ideas")
+        design_next_sprint=doc.find(id="workflow_approval_cycle").find(id="design_next_sprint")
+        self.failUnless(design_next_sprint, "could not find design_next_sprint")
+        # see a link on the great idea div that links back to the work page
+        link = doc.find(id="workflow_initial_stage").find(href="/work/")
+        self.failUnless(link, "could not find link from workflow back to project form")
 
     def test_us_page(self):
         """ Alice goes to www.emlprime.com and follows the link to the us page
@@ -114,3 +160,12 @@ class TestStory(CommonTestCase):
         finished_projects = doc.find(id="experience").find(id="finished_projects")
         self.failUnless(finished_projects, "Could not find %s" % finished_projects)
 
+    def test_play_page(self):
+        """ Alice goes to www.emlprime.com and clicks the link to the play page
+
+        she should...
+        """
+        alice = self.alice
+        # see the play page displayed
+        templates_used = ["play.html"]
+        doc = alice.clicks_a_link("/play/", templates_used=templates_used)

@@ -22,14 +22,16 @@ def single_display_session_values(request, context):
         """
         context['error_message'] = get_and_delete_messages(request, 'error')
         context['status_message'] = get_and_delete_messages(request, 'status')
-        context['focus'] = get_and_delete_focus(request)
-        context['id_created'] = get_and_delete_id_created(request)
         return context
 
 def get_and_delete_messages(request, key):
+	""" return the message and remove it from the session
+	TODO: need to debug why the session gives a keyerror on normal assignment
+	"""
         message_type = "%s_messages" % key
         message_buffer = "".join(['%s' % (message) for message in request.session.get(message_type, [])])
-        request.session[message_type] = []
+	if message_buffer:
+		request.session[message_type] = []
         return message_buffer
 
 def get_and_delete_focus(request):
