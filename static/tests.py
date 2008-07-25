@@ -1,6 +1,8 @@
 from emlprime.common.tests import CommonTestCase
+from emlprime.static.models import Project
 
 from django.core import management
+from django.conf import settings
 
 class TestStory(CommonTestCase):
     def setUp(self):
@@ -17,7 +19,7 @@ class TestStory(CommonTestCase):
         doc = alice.clicks_a_link("/", templates_used=templates_used)
         # see the page with the logo
         logo = doc.find(id="logo")
-        self.failUnlessEqual(logo["alt"], "EMLPrime", "Could not find %s" % EMLPrime)
+        self.failUnlessEqual(logo.find('img')["alt"], "EMLPrime")
         logo_image = doc.find(id="logo").find(src="/media/images/logo.png")
         self.failUnless(logo_image, "Could not find %s" % logo.png)
         # see the navigation links
@@ -43,6 +45,16 @@ class TestStory(CommonTestCase):
         play_snippet = doc.find(id="play_snippet")
         self.failUnless(play_snippet, "Could not find %s" % play_snippet)
         # see the footer with email and phone from settings and the current year copyright
+        email = doc.find(id="footer").find(id="email")
+        self.failUnless(email, "Could not find email")
+        self.failUnlessEqual(email.a.string, settings.FOOTER_DATA["email"])
+        phone_number = doc.find(id="footer").find(id="phone_number")
+        self.failUnless(phone_number, "Could not find phone_number")
+        self.failUnlessEqual(phone_number.p.string, settings.FOOTER_DATA["phone_number"])
+        copyright = doc.find(id="footer").find(id="copyright")
+        self.failUnless(copyright, "Could not find play_snippet")
+        self.failUnlessEqual(copyright.p.string, settings.FOOTER_DATA["copyright"])
+
 
     def test_work_page(self):
         """ Alice goes to www.emlprime.com and follows the link to the work page
@@ -63,6 +75,9 @@ class TestStory(CommonTestCase):
         # submit a project request using the form
         self.alice.sees_a_form(doc, "project")
         self.alice.sees_a_submit_button(doc, "project")
+        self.alice.submits_a_form(doc, "project", {'name':'test', 'email':'test@emlprime.com', 'description':'test project'})
+        self.failUnlessEqual(Project.objects.get().name, 'test')
+
 
     def test_us_page(self):
         """ Alice goes to www.emlprime.com and follows the link to the us page
@@ -80,8 +95,6 @@ class TestStory(CommonTestCase):
         self.failUnless(personal_info, "Could not find %s" % personal_info)
         experience = doc.find(id="experience")
         self.failUnless(experience, "Could not find %s" % experience)
-        role = doc.find(id="role")
-        self.failUnless(role, "Could not find %s" % role)
         personality = doc.find(id="personality")
         self.failUnless(personality, "Could not find %s" % personality)
         hobbies = doc.find(id="hobbies")
@@ -89,28 +102,15 @@ class TestStory(CommonTestCase):
         # see the name, email, and favorite bribe in the personal info section
         name = doc.find(id="personal_info").find(id="name")
         self.failUnless(name, "Could not find %s" % name)
-        email = doc.find(id="personal_info").find(id="email")
+        email = doc.find(id="personal_info").find(id="contact_email")
         self.failUnless(email, "Could not find %s" % email)
         favorite_bribe = doc.find(id="personal_info").find(id="favorite_bribe")
         self.failUnless(favorite_bribe, "Could not find %s" % favorite_bribe)
-        # see the languages, platforms, skills, and finished projects in the experience div
+        # see the languages, skills, and finished projects in the experience div
         languages = doc.find(id="experience").find(id="languages")
         self.failUnless(languages, "Could not find %s" % languages)
-        platforms = doc.find(id="experience").find(id="platforms")
-        self.failUnless(platforms, "Could not find %s" % platforms)
         skills = doc.find(id="experience").find(id="skills")
         self.failUnless(skills, "Could not find %s" % skills)
         finished_projects = doc.find(id="experience").find(id="finished_projects")
         self.failUnless(finished_projects, "Could not find %s" % finished_projects)
-        # see the roles outlined in the role div
-        testing = doc.find(id="role").find(id="testing")
-        self.failUnless(testing, "Could not find %s" % testing)
-        design = doc.find(id="role").find(id="design")
-        self.failUnless(design, "Could not find %s" % design)
-        customer_relations = doc.find(id="role").find(id="customer_relations")
-        self.failUnless(customer_relations, "Could not find %s" % customer_relations)
-        coding = doc.find(id="role").find(id="coding")
-        self.failUnless(coding, "Could not find %s" % coding)
-        communication = doc.find(id="role").find(id="communication")
-        self.failUnless(communication, "Could not find %s" % communication)
 

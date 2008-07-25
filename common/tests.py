@@ -34,15 +34,16 @@ class Actor(TestCase):
         """
         # request the page
         #submit the form
+        import traceback, sys
         try:
             response = self.client.get(url)
         except TemplateDoesNotExist:
-            import traceback, sys
             exception_message = "".join(traceback.format_exception_only(sys.exc_type, sys.exc_value)).strip()
             
             self.fail("No url to handle (%s) or template does not exist: (%s)" % (url, exception_message))
         except ViewDoesNotExist:
-            self.fail("No view to handle (%s)" % url)
+            exception_message = "".join(traceback.format_exception_only(sys.exc_type, sys.exc_value)).strip()
+            self.fail("No view to handle (%s): %s" % (url, exception_message))
         
         # check that this was a valid request
         self.failUnless(response.status_code in [200, 302])

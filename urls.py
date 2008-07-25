@@ -3,10 +3,12 @@ from emlprime.settings import MEDIA_ROOT
 
 urlpatterns = patterns('django.views.generic.simple',
     (r'^$', 'direct_to_template', {'template': 'index.html'}),
-    (r'^work/$', 'direct_to_template', {'template': 'work.html'}),
     (r'^us/$', 'direct_to_template', {'template': 'us.html'}),
 )
 
 urlpatterns += patterns('',
     (r'^media/(.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
+    (r'^work/$', 'emlprime.views.detail'),
+    (r'^work/create/$', 'emlprime.views.confirmation'),
+    (r'^project/create/$', 'emlprime.views.detail'),
 )
