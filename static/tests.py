@@ -1,7 +1,7 @@
 from emlprime.common.tests import CommonTestCase
 from emlprime.static.models import Project
 
-from django.core import management
+from django.core import mail, management
 from django.conf import settings
 
 class TestStory(CommonTestCase):
@@ -77,6 +77,9 @@ class TestStory(CommonTestCase):
         self.alice.sees_a_submit_button(doc, "project")
         self.alice.submits_a_form(doc, "project", {'name':'test', 'email':'test@emlprime.com', 'description':'test project'})
         self.failUnlessEqual(Project.objects.get().name, 'test')
+        # check that email is sent
+        print "outbox:", mail.outbox[0].subject
+        print "outbox:", mail.outbox[0].message()
 
     def test_workflow_page(self):
         """ Alice goes to www.emlprime.com/work and clicks on the link to the sample workflow
