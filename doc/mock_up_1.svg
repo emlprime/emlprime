@@ -28,10 +28,10 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.685"
-     inkscape:cx="451.89117"
+     inkscape:cx="463.72124"
      inkscape:cy="341.60584"
      inkscape:document-units="px"
-     inkscape:current-layer="layer8"
+     inkscape:current-layer="layer7"
      showgrid="false"
      showguides="true"
      inkscape:window-width="1279"
@@ -821,7 +821,9 @@
   <g
      inkscape:groupmode="layer"
      id="layer8"
-     inkscape:label="banner">
+     inkscape:label="banner"
+     sodipodi:insensitive="true"
+     style="display:inline">
     <g
        id="g3003"
        transform="matrix(0.3631052,0,0,0.3631052,-2.6419245,690.11669)"
@@ -1284,7 +1286,7 @@
     <g
        id="g2821"
        transform="matrix(0,-0.6063341,0.6023221,0,267.30715,846.02783)"
-       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/arrow_top.png"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/straight_arrow_right.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"
        style="display:inline">
@@ -1790,7 +1792,7 @@
        style="display:inline"
        inkscape:export-ydpi="90"
        inkscape:export-xdpi="90"
-       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/arrow_top.png"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/straight_arrow_left.png"
        transform="matrix(0,0.6063341,-0.6023221,0,733.52142,-99.470256)"
        id="g3754">
       <g
@@ -1819,6 +1821,131 @@
            inkscape:randomized="0"
            d="M 68.918923,436.48649 L 166.4683,436.92309 L 117.3155,521.18502 L 68.918923,436.48649 z"
            transform="translate(0.8773726,-102.21752)" />
+      </g>
+    </g>
+    <g
+       id="g5211"
+       transform="matrix(0.2980024,0.5280489,-0.5245549,0.2960306,343.93751,-36.302515)"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/arrow_top_left.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="display:inline"
+       inkscape:transform-center-x="5.5111126"
+       inkscape:transform-center-y="-89.649672">
+      <g
+         transform="matrix(0.7029872,0,0,0.6364526,809.49081,78.27678)"
+         id="g5213">
+        <rect
+           y="277.02704"
+           x="92.219635"
+           height="75.675674"
+           width="52.702702"
+           id="rect5215"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           transform="translate(0.8773726,-102.21752)"
+           d="M 68.918923,436.48649 L 166.4683,436.92309 L 117.3155,521.18502 L 68.918923,436.48649 z"
+           inkscape:randomized="0"
+           inkscape:rounded="0"
+           inkscape:flatsided="true"
+           sodipodi:arg2="-1.5663206"
+           sodipodi:arg1="-2.6135182"
+           sodipodi:r2="26.290644"
+           sodipodi:r1="56.320721"
+           sodipodi:cy="464.86487"
+           sodipodi:cx="117.56757"
+           sodipodi:sides="3"
+           id="path5217"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           sodipodi:type="star" />
+      </g>
+    </g>
+    <g
+       id="g5227"
+       transform="matrix(0.3058154,-0.9520908,0.9520908,0.3058154,-163.60196,764.72866)"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/arrow_bottom_right.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <g
+         id="g5219"
+         transform="matrix(0.3781141,-0.4739945,0.4708582,0.3756122,-65.096167,1043.3737)"
+         inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/arrow_bottom_left.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         style="display:inline"
+         inkscape:transform-center-x="80.102049"
+         inkscape:transform-center-y="35.449827">
+        <g
+           transform="matrix(0.7029872,0,0,0.6364526,809.49081,78.27678)"
+           id="g5221">
+          <rect
+             y="277.02704"
+             x="92.219635"
+             height="75.675674"
+             width="52.702702"
+             id="rect5223"
+             style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+          <path
+             transform="translate(0.8773726,-102.21752)"
+             d="M 68.918923,436.48649 L 166.4683,436.92309 L 117.3155,521.18502 L 68.918923,436.48649 z"
+             inkscape:randomized="0"
+             inkscape:rounded="0"
+             inkscape:flatsided="true"
+             sodipodi:arg2="-1.5663206"
+             sodipodi:arg1="-2.6135182"
+             sodipodi:r2="26.290644"
+             sodipodi:r1="56.320721"
+             sodipodi:cy="464.86487"
+             sodipodi:cx="117.56757"
+             sodipodi:sides="3"
+             id="path5225"
+             style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             sodipodi:type="star" />
+        </g>
+      </g>
+    </g>
+    <g
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/arrow_top_right.png"
+       transform="matrix(-0.9926895,0.1206963,-0.1206963,-0.9926895,1216.1138,1276.1321)"
+       id="g5233">
+      <g
+         inkscape:transform-center-y="35.449827"
+         inkscape:transform-center-x="80.102049"
+         style="display:inline"
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/arrow_bottom_left.png"
+         transform="matrix(0.3781141,-0.4739945,0.4708582,0.3756122,-65.096167,1043.3737)"
+         id="g5235">
+        <g
+           id="g5237"
+           transform="matrix(0.7029872,0,0,0.6364526,809.49081,78.27678)">
+          <rect
+             style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="rect5239"
+             width="52.702702"
+             height="75.675674"
+             x="92.219635"
+             y="277.02704" />
+          <path
+             sodipodi:type="star"
+             style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="path5241"
+             sodipodi:sides="3"
+             sodipodi:cx="117.56757"
+             sodipodi:cy="464.86487"
+             sodipodi:r1="56.320721"
+             sodipodi:r2="26.290644"
+             sodipodi:arg1="-2.6135182"
+             sodipodi:arg2="-1.5663206"
+             inkscape:flatsided="true"
+             inkscape:rounded="0"
+             inkscape:randomized="0"
+             d="M 68.918923,436.48649 L 166.4683,436.92309 L 117.3155,521.18502 L 68.918923,436.48649 z"
+             transform="translate(0.8773726,-102.21752)" />
+        </g>
       </g>
     </g>
   </g>
