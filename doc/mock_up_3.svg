@@ -254,7 +254,8 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(80.5,-18.076477)"
-     style="display:inline">
+     style="display:none"
+     sodipodi:insensitive="true">
     <rect
        style="opacity:1;fill:url(#radialGradient3339);fill-opacity:1;stroke:none;stroke-width:1.99450135;stroke-miterlimit:1;stroke-dasharray:none;stroke-opacity:0.80701755"
        id="rect3331"
@@ -306,7 +307,8 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Logo"
-     style="display:inline">
+     style="display:none"
+     sodipodi:insensitive="true">
     <rect
        style="fill:none;fill-opacity:0.9921568;stroke:#cccccc;stroke-width:3.97799993;stroke-miterlimit:1;stroke-dasharray:none;stroke-opacity:1"
        id="rect3256"
@@ -355,7 +357,10 @@
      style="display:none"
      sodipodi:insensitive="true">
     <g
-       id="g4530">
+       id="g4530"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/home_background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
       <image
          inkscape:transform-center-y="333.80208"
          inkscape:transform-center-x="-28.208626"
@@ -403,7 +408,10 @@
        height="373.50214"
        id="image4528"
        x="331.67435"
-       y="256.44803" />
+       y="256.44803"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/work_background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -419,14 +427,16 @@
        height="359.44028"
        id="image4526"
        x="187.19789"
-       y="248.3145" />
+       y="248.3145"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/us_background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="play_page"
-     sodipodi:insensitive="true"
-     style="display:none">
+     style="display:inline">
     <image
        style="opacity:0.4;display:inline"
        xlink:href="/home/peter/Desktop/emlprime_game_edit.png"
@@ -435,6 +445,9 @@
        height="282.79977"
        id="image4524"
        x="441.09451"
-       y="255.03999" />
+       y="255.03999"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/play_background.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>

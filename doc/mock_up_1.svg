@@ -1141,8 +1141,7 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="Workflow"
-     style="display:none"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <g
        style="display:inline"
        inkscape:export-ydpi="90"
@@ -1946,6 +1945,41 @@
              d="M 68.918923,436.48649 L 166.4683,436.92309 L 117.3155,521.18502 L 68.918923,436.48649 z"
              transform="translate(0.8773726,-102.21752)" />
         </g>
+      </g>
+    </g>
+    <g
+       id="g2671"
+       transform="matrix(0.3423395,-0.5004445,0.4971331,0.3400743,-310.46701,469.98194)"
+       inkscape:export-filename="/home/peter/Documents/www/emlprime/media/images/arrow_bottom_left.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="display:inline">
+      <g
+         transform="matrix(0.7029872,0,0,0.6364526,809.49081,78.27678)"
+         id="g2673">
+        <rect
+           y="277.02704"
+           x="92.219635"
+           height="75.675674"
+           width="52.702702"
+           id="rect2675"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <path
+           transform="translate(0.8773726,-102.21752)"
+           d="M 68.918923,436.48649 L 166.4683,436.92309 L 117.3155,521.18502 L 68.918923,436.48649 z"
+           inkscape:randomized="0"
+           inkscape:rounded="0"
+           inkscape:flatsided="true"
+           sodipodi:arg2="-1.5663206"
+           sodipodi:arg1="-2.6135182"
+           sodipodi:r2="26.290644"
+           sodipodi:r1="56.320721"
+           sodipodi:cy="464.86487"
+           sodipodi:cx="117.56757"
+           sodipodi:sides="3"
+           id="path2677"
+           style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           sodipodi:type="star" />
       </g>
     </g>
   </g>
