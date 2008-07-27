@@ -1,0 +1,21 @@
+
+
+#game div {
+width: 100px;
+height: 100px;
+position: absolute;
+}
+
+#blue {background-color: darkblue;}
+
+#red {
+background-color: darkred;
+top: 100px;
+}
+
+#yellow {background-color: darkyellow;
+top: 100px;
+left: 100px;}
+
+#green {background-color: darkgreen;
+left: 100px;}

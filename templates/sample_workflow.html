@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="workflow_cycle">
+  <img id="workflow_top_arrow" src="/media/images/arrow_top.png" class="workflow_arrow" />
+  <img id="workflow_right_top_arrow_1" src="/media/images/arrow_top_right.png" class="workflow_arrow" />
+  <img id="workflow_right_top_arrow_2" src="/media/images/arrow_top_right.png" class="workflow_arrow" />
+  <img id="workflow_right_top_arrow_3" src="/media/images/arrow_top_right.png" class="workflow_arrow" />
+  <img id="workflow_right_bottom_arrow_1" src="/media/images/arrow_bottom_right.png" class="workflow_arrow" />
+  <img id="workflow_right_bottom_arrow_2" src="/media/images/arrow_bottom_right.png" class="workflow_arrow" />
+  <img id="workflow_left_top_arrow_1" src="/media/images/arrow_top_left.png" class="workflow_arrow" />
+  <img id="workflow_left_top_arrow_2" src="/media/images/arrow_top_left.png" class="workflow_arrow" />
+  <img id="workflow_left_bottom_arrow_1" src="/media/images/arrow_bottom_left.png" class="workflow_arrow" />
+  <img id="workflow_left_bottom_arrow_2" src="/media/images/arrow_bottom_left.png" class="workflow_arrow" />
+
+  <div id="workflow_initial_stage">
+	<a href="/work/">
+	  <div id="great_idea" class="cycle_item">
+		<p>You have a great idea.  You present it to us.</p>
+	  </div>
+	</a>
+	<div id="transformation" class="cycle_item">
+	  <p>We help you transform your idea into stories from the user's perspective.  This is the backlog.</p>
+	</div>
+	<div id="initial_sprint" class="cycle_item">
+	  <p>We help you prioritize the stories and select the first ones for the initial sprint</p>
+	</div>
+  </div>
+  <div id="workflow_sprint_cycle">
+	<div id="assign_sprint_tasks" class="cycle_item">
+	  <p>You select the tasks for the sprint.  We assign point values.</p>
+	</div>
+	<div id="write_tests" class="cycle_item">
+	  <p>We write tests to verify that new code is needed for the stories.</p>
+	</div>
+	<div id="write_code" class="cycle_item">
+	  <p>We write fully documented code until the tests pass and the stories are satisfied.</p>
+	</div>
+	<div id="update_burndown" class="cycle_item">
+	  <p>We update the burndown chart daily to show you our progress.</p>
+	</div>
+	<div id="present_stories" class="cycle_item">
+	  <p>When all stories for the sprint pass, we present them to you.</p>
+	</div>
+  </div>
+
+  <div id="workflow_approval_cycle">
+	<div id="story_approval" class="cycle_item">
+	  <p>You approve each story.</p>
+	</div>
+	<div id="get_paid" class="cycle_item">
+	  <p>We get paid for the complete sprint.</p>
+	</div>
+	<div id="add_ideas" class="cycle_item">
+	  <p>You add any new ideas to the backlog.</p>
+	</div>
+	<div id="design_next_sprint" class="cycle_item">
+	  We work with you to desgin the next sprint.
+	</div>
+  </div>
+
+</div>
+{% endblock %}
