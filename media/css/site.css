@@ -8,6 +8,7 @@
 body
 {
 				font-family: arial;
+				background-image: url("/media/images/background.jpg");
 				color: black;
                 width: 800px;
                 margin: auto;
@@ -21,15 +22,18 @@ margin-left: -10000px;
 
 #navigation
 {
-width: 800px;
+width: 620px;
 height: 35px;
+margin-bottom: 1em;
 position: relative;
 }
 
 #footer
 {
-width: 800px;
+width: 620px;
+outline: 1px solid blue;
 position: relative;
+background-image: url("/media/images/footer.png");
 }
 
 #email, #phone_number, #copyright
@@ -40,23 +44,25 @@ top: 0px;
 
 #phone_number
 {
-left: 360px;
+left: 260px;
 }
 
 #copyright
 {
-right: 0px;
+right: 10px;
 }
 
 #index
 {
-width: 800px;
+width: 620px;
 height: 400px;
 position: relative;
 }
 
 #work, #us, #play
 {
+margin-top: 1em;
+font-size: 1.4em;
 position: absolute;
 top: 0px;
 }
@@ -73,24 +79,30 @@ right: 10px;
 
 #us
 {
-left: 380px;
+left: 290px;
 }
 
 #content
 {
+				background-image: url("/media/images/content.jpg");
 				margin: auto;
-				width: 800px;
+				width: 640px;
 				color: black;
-}
-
-a
-{
-				color: black;	
 }
 
 a:link, a:visited, a:hover, a:active
 {
 				text-decoration: none;
+}
+
+a:link, a:visited, a:active
+{
+color: black;
+}
+
+a:hover
+{
+color: #0000c9;
 }
 
 #mission_statement
@@ -107,28 +119,28 @@ a:link, a:visited, a:hover, a:active
 #work_snippet, #us_snippet, #play_snippet
 {
 				position: absolute;
-				width: 200px;
+				width: 150px;
 				top: 0px;
 }
 
 #work_snippet
 {
-				left: 0px;
+				left: 20px;
 }
 
 #us_snippet
 {
-				left: 300px;
+				left: 220px;
 }
 
 #play_snippet
 {
-				left: 600px;
+				left: 420px;
 }
 
 #scrum_intro
 {
-margin-top: 2em;
+margin: 2em;
 }
 
 #cycle
@@ -136,54 +148,102 @@ margin-top: 2em;
 margin-top: 2em;
 margin-bottom: 2em;
 position: relative;
-width: 800px;
+width: 640px;
 height: 400px;
 }
 
 #initial_conversation, #sprint_cycle, #approval_cycle
 {
 outline: 1px solid black;
-width: 300px;
+width: 200px;
 position: absolute;
 }
 
 #initial_conversation
 {
 top: 0px;
-left: 250px;
+left: 220px;
 }
 
 #arrow_top
 {
 position: absolute;
-top: 70px;
-left: 375px;
+top: 90px;
+left: 300px;
 }
 
 #sprint_cycle
 {
-left: 250px;
+left: 220px;
 top: 150px;
 }
 
 #arrow_right
 {
 position: absolute;
-top: 170px;
-left: 100px;
+top: 160px;
+left: 70px;
 }
 
 #arrow_left
 {
 position: absolute;
-top: 170px;
-right: 100px;
+top: 190px;
+right: 70px;
 }
 
 #approval_cycle
 {
-left: 250px;
+left: 220px;
 bottom: 0px;
+}
+
+#project_form
+{
+width: 400px;
+height: 220px;
+margin: auto;
+text-align: left;
+position: relative;
+}
+
+#project_form label
+{
+float: left;
+margin-right: 10px;
+width: 80px;
+}
+
+#project_form input
+{
+outline: 1px solid black;
+}
+
+#project_form textarea
+{
+outline: 1px solid black;
+width: 280px;
+}
+
+#project_submit
+{
+right: 170px;
+bottom: 10px;
+position: absolute;;
+text-align: center;
+}
+
+#project_confirmation
+{
+height: 200px;
+margin-top: 50px;
+}
+
+#workflow_explanation
+{
+padding: 1em;
+font-size: 0.8em;
+margin-right: 20px;
 }
 
 #workflow_cycle
@@ -191,8 +251,8 @@ bottom: 0px;
 margin-top: 2em;
 position: relative;
 font-size: 0.8em;
-width: 800px;
-height: 600px;
+width: 640px;
+height: 500px;
 }
 
 .cycle_item
@@ -202,16 +262,28 @@ position: absolute;
 outline: 1px solid black
 }
 
+#workflow_right_arrow_1
+{
+left: 100px;
+top: 0px;
+}
+
 #transformation
 {
 top: 0px;
-left: 175px;
+left: 150px;
+}
+
+#workflow_right_arrow_2
+{
+left: 250px;
+top: 0px;
 }
 
 #initial_sprint
 {
 top: 0px;
-left: 350px;
+left: 300px;
 }
 
 .workflow_arrow
@@ -219,117 +291,117 @@ left: 350px;
 position: absolute;
 }
 
-#workflow_top_arrow
+#workflow_top_arrow_2
 {
-left: 380px;
-top: 80px;
+left: 330px;
+top: 70px;
 }
 
 #assign_sprint_tasks
 {
-top: 140px;
-left: 350px;
+top: 120px;
+left: 300px;
 }
 
 #workflow_left_top_arrow_1
 {
-top: 85px;
-left: 220px;
+top: 135px;
+left: 250px;
 }
 
 #write_tests
 {
-top: 190px;
-left: 195px;
+top: 150px;
+left: 150px;
 }
 
 #workflow_left_top_arrow_2
 {
-top: 140px;
-left: 50px;
+top: 170px;
+left: 100px;
 }
 
 #write_code
 {
-top: 250px;
+top: 200px;
 }
 
-#workflow_left_bottom_arrow_1
+#workflow_top_arrow_1
 {
-top: 330px;
-left: 0px;
+top: 270px;
+left: 25px;
 }
 
 #update_burndown
 {
-left: 130px;
-top: 400px;
+left: 0px;
+top: 325px;
 }
 
-#workflow_left_bottom_arrow_2
+#workflow_left_bottom_arrow_1
 {
-top: 460px;
-left: 150px;
+top: 380px;
+left: 80px;
 }
 
 #present_stories
 {
-left: 270px;
-top: 480px;
+left: 130px;
+top: 410px;
 }
 
-#workflow_right_bottom_arrow_1
+#workflow_right_arrow_3
 {
-left: 340px;
-top: 490px;
+left: 230px;
+top: 415px;
 }
 
 #story_approval
 {
-left: 465px;
-top: 460px;
+left: 285px;
+top: 420px;
 }
 
-#workflow_right_bottom_arrow_2
+#workflow_right_bottom_arrow_1
 {
-left: 550px;
-top: 450px;
+left: 385px;
+top: 410px;
 }
 
 #get_paid
 {
-left: 670px;
-top: 400px;
+left: 420px;
+top: 365px;
 }
 
-#workflow_right_top_arrow_1
+#workflow_right_bottom_arrow_2
 {
-left: 670px;
-top: 320px;
+left: 470px;
+top: 325px;
 }
 
 #add_ideas
 {
-left: 565px;
-top: 330px;
+left: 470px;
+top: 280px;
 }
 
-#workflow_right_top_arrow_2
+#workflow_right_top_arrow_1
 {
-left: 585px;
-top: 200px;
+left: 500px;
+top: 240px;
 }
 
 #design_next_sprint
 {
-left: 480px;
-top: 220px;
+left: 450px;
+top: 190px;
 }
 
-#workflow_right_top_arrow_3
+#workflow_right_top_arrow_2
 {
-left:470px;
-top: 100px;
+left: 400px;
+top: 160px;
 }
 
 .projects
@@ -340,14 +412,14 @@ list-style-type: none;
 
 #profiles
 {
-width: 800px;
+width: 640px;
 height: 600px;
 }
 
 #peter
 {
 padding: 1em;
-width: 350px;
+width: 270px;
 height: 500px;
 text-align: left;
 float: left;
@@ -356,7 +428,8 @@ float: left;
 #laura
 {
 padding: 1em;
-width: 350px;
+width: 270px;
+margin-right: 20px;
 height: 500px;
 text-align: left;
 float: right;
@@ -372,6 +445,6 @@ margin-left: 60px;
 #game
 {
 position: relative;
-width: 800px;
+width: 640px;
 height: 400px;
 }

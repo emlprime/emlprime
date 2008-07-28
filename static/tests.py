@@ -24,15 +24,12 @@ class TestStory(CommonTestCase):
         self.failUnless(logo_image, "Could not find %s" % logo.png)
         # see the navigation links
         work = doc.find(src="/media/images/work.png")
-        self.failUnless(work, "Could not find %s" % work.png)
         work_link = doc.find(id="navigation").find(href="/work/")
         self.failUnless(work_link, "Could not find link to %s" % work)
         us = doc.find(src="/media/images/us.png")
-        self.failUnless(us, "Could not find %s" % us.png)
         us_link = doc.find(id="navigation").find(href="/us/")
         self.failUnless(us_link, "Could not find link to %s" % us)
         play = doc.find(src="/media/images/play.png")
-        self.failUnless(play, "Could not find %s" % play.png)
         play_link = doc.find(id="navigation").find(href="/play/")
         self.failUnless(play_link, "Could not find link to %s" % play)
         # see the mission statement and work, us, and play snippets
@@ -78,8 +75,8 @@ class TestStory(CommonTestCase):
         self.alice.submits_a_form(doc, "project", {'name':'test', 'email':'test@emlprime.com', 'description':'test project'})
         self.failUnlessEqual(Project.objects.get().name, 'test')
         # check that email is sent
-        print "outbox:", mail.outbox[0].subject
-        print "outbox:", mail.outbox[0].message()
+#        print "outbox:", mail.outbox[0].subject
+#        print "outbox:", mail.outbox[0].message()
 
     def test_workflow_page(self):
         """ Alice goes to www.emlprime.com/work and clicks on the link to the sample workflow
@@ -172,3 +169,15 @@ class TestStory(CommonTestCase):
         # see the play page displayed
         templates_used = ["play.html"]
         doc = alice.clicks_a_link("/play/", templates_used=templates_used)
+        # see the game background and the four colors
+        game_background = doc.find(id="game").find(id="game_background")
+        self.failUnless(game_background, "Could not find game_background")
+        green = doc.find(id="game").find(id="green")
+        self.failUnless(green, "Could not find green")
+        red = doc.find(id="game").find(id="red")
+        self.failUnless(red, "Could not find red")
+        blue = doc.find(id="game").find(id="blue")
+        self.failUnless(blue, "Could not find blue")
+        yellow = doc.find(id="game").find(id="yellow")
+        self.failUnless(yellow, "Could not find yellow")
+        

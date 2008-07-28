@@ -20,15 +20,15 @@
     <div id="logo">
       <a href="/"><img src="/media/images/logo.png" alt="EMLPrime" /></a>
     </div>
-    <div id="navigation">
-      <a href="/work/"><img id="work" src="/media/images/work.png" alt="Work" /></a>
-      <a href="/us/"><img id="us" src="/media/images/us.png" alt="Us" /></a>
-      <a href="/play/"><img id="play" src="/media/images/play.png" alt="Play" /></a>
-    </div>
     <div id="content">
+    <div id="navigation">
+      <a href="/work/"><p id="work">Work</p></a>
+      <a href="/us/"><p id="us">Us</p></a>
+      <a href="/play/"><p id="play">Play</p></a>
+    </div>
       {% block content %}
       {% endblock %}
-    </div>
     {% footer %}
+    </div>
   </body>
 </html>

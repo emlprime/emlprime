@@ -1,21 +1,39 @@
 
 
-#game div {
-width: 100px;
-height: 100px;
+#game
+{
+width: 300px;
+height: 300px;
+position: relative;
+margin: auto;
+padding: 2em;
+}
+
+#blue, #red, #green, #yellow
+{
 position: absolute;
 }
 
-#blue {background-color: darkblue;}
-
-#red {
-background-color: darkred;
-top: 100px;
+#red
+{
+top: 40px;
+left: 60px;
 }
 
-#yellow {background-color: darkyellow;
-top: 100px;
-left: 100px;}
+#yellow
+{
+top: 150px;
+left: 60px;
+}
 
-#green {background-color: darkgreen;
-left: 100px;}
+#green
+{
+top: 150px;
+left: 200px;
+}
+
+#blue
+{
+top: 40px;
+left: 200px;
+}
