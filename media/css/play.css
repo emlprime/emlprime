@@ -1,12 +1,22 @@
-
+#rules
+{
+margin-left: 60px;
+margin-top: 50px;
+margin-bottom: 50px;
+width: 500px;
+text-align: center;
+}
 
 #game
 {
-width: 300px;
-height: 300px;
+width: 230px;
+height: 180px;
+background-image: url(/media/images/game_background.png);
+background-repeat: no-repeat;
 position: relative;
-margin: auto;
-padding: 2em;
+margin-bottom: 20px;
+padding: 3em;
+margin-left: 170px;
 }
 
 #blue, #red, #green, #yellow
@@ -16,24 +26,24 @@ position: absolute;
 
 #red
 {
-top: 40px;
-left: 60px;
+top: 5px;
+left: 10px;
 }
 
 #yellow
 {
-top: 150px;
-left: 60px;
+top: 60px;
+left: 10px;
 }
 
 #green
 {
-top: 150px;
-left: 200px;
+top: 5px;
+left: 80px;
 }
 
 #blue
 {
-top: 40px;
-left: 200px;
+top: 60px;
+left: 80px;
 }
