@@ -31,7 +31,6 @@ position: relative;
 #footer
 {
 width: 620px;
-outline: 1px solid blue;
 position: relative;
 background-image: url("/media/images/footer.png");
 }

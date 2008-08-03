@@ -31,6 +31,9 @@ def ajax_or_http_response(view):
         if result.has_key('ids_to_replace'):
             ids_to_replace = result.pop('ids_to_replace')
             context.update(ids_to_replace)
+            
+        # provide the current page's url for navigation links
+        context["current_url"] = request.META["PATH_INFO"] if request.META["PATH_INFO"] else "/"
         return render_to_response(template, context, context_instance=RequestContext(request))
 
     return _handle_response

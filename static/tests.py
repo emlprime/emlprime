@@ -13,21 +13,20 @@ class TestStatic(CommonTestCase):
 
         She should...
         """
-        urls = ["/", "/work/", "/us/", "/play/"]
+        urls = ["/work/", "/us/", "/play/"]
         expected_titles = ["work", "us", "play"]
         expected_titles.sort()
         # see all three navigation titles on each page
         for url in urls:
             doc = self.alice.clicks_a_link(url)
             titles = doc.find(id="navigation").findAll("p")
-            print """titles:""", 
-            
-            displayed_titles = [t.string.lower() if t.string else t.a.string.lower() for t in titles]
+            displayed_titles = [t.string.lower().strip() if t.string else t.a.string.lower() for t in titles]
             displayed_titles.sort()
             self.failUnlessEqual(displayed_titles, expected_titles)
             # see links to all three sections except to the current page
             for title in titles:
-                title_string = t.string.lower() if t.string else t.a.string.lower()
+                # grabbing just the strings out of the titles
+                title_string = title.string.lower().strip() if title.string else title.a.string.lower().strip()
                 if title_string in url:
                     self.failUnless(not title.find("a"), "%s should not be a link on its own page" % title_string)
                 else:

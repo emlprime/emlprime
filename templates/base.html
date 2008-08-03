@@ -1,13 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD/ XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/html">
-{% load common_tags %}
+  {% load common_tags %}
   <head>
     <title>EMLPrime</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-859-1" />
     <link rel="stylesheet" type="text/css" href="/media/css/site.css" />
     <link rel="stylesheet" type="text/css" href="/media/css/play.css" />
-	<script type="text/javascript" src="/media/scripts/jquery-1.2.3.min.js"></script>
-	
+    <script type="text/javascript" src="/media/scripts/jquery-1.2.3.min.js"></script>
+    
   </head>
   <body>
     <a href="/">
@@ -21,14 +21,15 @@
       <a href="/"><img src="/media/images/logo.png" alt="EMLPrime" /></a>
     </div>
     <div id="content">
-    <div id="navigation">
-      <p id="work"><a href="/work/">Work</a></p>
-      <p id="us"><a href="/us/">Us</a></p>
-      <p id="play"><a href="/play/">Play</a></p>
+      <div id="navigation">
+	
+	<p id="work">{% ifequal current_url "/work/" %}Work{% else %}<a href="/work/">Work</a>{% endifequal %}</p>
+	<p id="us">{% ifequal current_url "/us/" %}Us{% else %}<a href="/us/">Us</a>{% endifequal %}</p>
+	<p id="play">{% ifequal current_url "/play/" %}Play{% else %}<a href="/play/">Play</a>{% endifequal %}</p>
     </div>
-      {% block content %}
-      {% endblock %}
+    {% block content %}
+    {% endblock %}
     {% footer %}
-    </div>
-  </body>
+  </div>
+</body>
 </html>

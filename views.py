@@ -43,3 +43,17 @@ def play(request):
     #generates a random sequence of 50 colors
     #answer_key = [choice(colors) for i in range(50)]
     return locals()
+
+@ajax_or_http_response
+def us(request):
+    """ Display info about us
+    """
+    template = "us.html"
+    return locals()
+
+@ajax_or_http_response
+def sample_workflow(request):
+    """ Display a sample workflow
+    """
+    template = "sample_workflow.html"
+    return locals()
