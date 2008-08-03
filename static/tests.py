@@ -3,6 +3,7 @@ from emlprime.static.models import Project
 
 from django.core import mail, management
 from django.conf import settings
+from django.utils import simplejson
 
 class TestStatic(CommonTestCase):
     def setUp(self):
@@ -202,4 +203,8 @@ class TestStatic(CommonTestCase):
         self.failUnless(blue, "Could not find blue")
         yellow = doc.find(id="game").find(id="yellow")
         self.failUnless(yellow, "Could not find yellow")
-        
+        response = alice.client.get("/play/get_answer_key/")
+        displayed_list = simplejson.loads(response.content)
+
+        self.failUnlessEqual(type(displayed_list), list)
+        self.failUnlessEqual(len(displayed_list), 50)

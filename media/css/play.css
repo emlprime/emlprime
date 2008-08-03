@@ -26,24 +26,24 @@ position: absolute;
 
 #red
 {
-top: 5px;
-left: 10px;
+top: 15px;
+left: 15px;
 }
 
 #yellow
 {
-top: 60px;
-left: 10px;
+top: 120px;
+left: 15px;
 }
 
 #green
 {
-top: 5px;
-left: 80px;
+top: 15px;
+left: 180px;
 }
 
 #blue
 {
-top: 60px;
-left: 80px;
+top: 120px;
+left: 180px;
 }

@@ -1,5 +1,6 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.core.mail import mail_admins
+from django.utils import simplejson
 from random import choice
 
 from emlprime.static.models import Project
@@ -36,13 +37,17 @@ def confirmation(request):
 def play(request):
     """ Provides a sequence of 50 colors for the game
     """
-    template = "play.html"
-    
-    #lists the colors available
-    #colors = ['red', 'green', 'blue', 'yellow']
-    #generates a random sequence of 50 colors
-    #answer_key = [choice(colors) for i in range(50)]
+    template = "play.html"    
     return locals()
+
+def get_answer_key(request):
+    # lists the colors available
+    colors = ["red", "green", "blue", "yellow"]
+    # generates a random sequence of 50 colors
+    answer_key = [choice(colors) for i in range(50)]
+    json_answer_key = simplejson.dumps(answer_key)
+    
+    return HttpResponse(json_answer_key, mimetype="application/json")
 
 @ajax_or_http_response
 def us(request):
