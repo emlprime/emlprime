@@ -4,9 +4,34 @@ from emlprime.static.models import Project
 from django.core import mail, management
 from django.conf import settings
 
-class TestStory(CommonTestCase):
+class TestStatic(CommonTestCase):
     def setUp(self):
         CommonTestCase.setUp(self)
+
+    def test_navigation(self):
+        """ Alice visits each page.
+
+        She should...
+        """
+        urls = ["/", "/work/", "/us/", "/play/"]
+        expected_titles = ["work", "us", "play"]
+        expected_titles.sort()
+        # see all three navigation titles on each page
+        for url in urls:
+            doc = self.alice.clicks_a_link(url)
+            titles = doc.find(id="navigation").findAll("p")
+            print """titles:""", 
+            
+            displayed_titles = [t.string.lower() if t.string else t.a.string.lower() for t in titles]
+            displayed_titles.sort()
+            self.failUnlessEqual(displayed_titles, expected_titles)
+            # see links to all three sections except to the current page
+            for title in titles:
+                title_string = t.string.lower() if t.string else t.a.string.lower()
+                if title_string in url:
+                    self.failUnless(not title.find("a"), "%s should not be a link on its own page" % title_string)
+                else:
+                    self.failUnless(title.find("a"), "%s should have a link on this page: %s" % (title_string, url))
 
     def test_home_page(self):
         """ Alice goes to www.emlprime.com
