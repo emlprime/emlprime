@@ -170,8 +170,6 @@ class TestStory(CommonTestCase):
         templates_used = ["play.html"]
         doc = alice.clicks_a_link("/play/", templates_used=templates_used)
         # see the game background and the four colors
-        game_background = doc.find(id="game").find(id="game_background")
-        self.failUnless(game_background, "Could not find game_background")
         green = doc.find(id="game").find(id="green")
         self.failUnless(green, "Could not find green")
         red = doc.find(id="game").find(id="red")
