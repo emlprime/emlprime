@@ -3,6 +3,7 @@ emlprime.play = function () {
     var self = {
         key_sequence: [],
         clicked_sequence: [],
+	game_over: false,
 	playback_position: 0,
 	playback_limit: 1,
         click_delay_limit: 5000,  // 5 second pause between clicks
@@ -32,6 +33,11 @@ emlprime.play = function () {
 	click_handler: function (event) {
 	    var color = $(event.target).attr('alt');
 	    self.clicked_sequence.push(color);
+	    var result = self.evaluate_click();
+	    if (result == false){
+		self.end_game();
+		return;
+	    }
 	    var playback_length = (self.playback_limit - 1), // We've already incremented playback limit
 	        clicked_sequence_length = self.clicked_sequence.length;
 	    
@@ -52,6 +58,18 @@ emlprime.play = function () {
 
 	    //console.log(self.clicked_sequence);
 	},
+	evaluate_click: function() {
+	    for (var i = 0; i < self.clicked_sequence.length; i++) {
+		if (self.key_sequence[i] != self.clicked_sequence[i]) {
+		    return false;
+		    }
+		}
+	    return true;
+	},
+	end_game: function() {
+	    alert("Game Over!");
+	    self.game_over = true;
+	},
 	load_answer_key: function(data) {
 	    //console.info("got data from server");
 	    //console.log(data);
@@ -59,6 +77,9 @@ emlprime.play = function () {
 	    self.playback();
 	},
 	playback: function() {
+	    if (self.game_over == true) {
+		return;
+	    }
 	    console.info("playback");
 	    console.log("position:"+self.playback_position);
 	    console.log("limit:"+self.playback_limit);
