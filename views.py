@@ -44,7 +44,7 @@ def get_answer_key(request):
     # lists the colors available
     colors = ["red", "green", "blue", "yellow"]
     # generates a random sequence of 50 colors
-    answer_key = [choice(colors) for i in range(50)]
+    answer_key = [choice(colors) for i in range(5)]
     json_answer_key = simplejson.dumps(answer_key)
     
     return HttpResponse(json_answer_key, mimetype="application/json")
