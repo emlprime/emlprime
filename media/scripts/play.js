@@ -35,31 +35,37 @@ emlprime.play = function () {
 	    var playback_length = (self.playback_limit - 1), // We've already incremented playback limit
 	        clicked_sequence_length = self.clicked_sequence.length;
 	    
-	    console.log("clicked sequence length:" + clicked_sequence_length);
-	    console.log("playback length:" + playback_length);
-	    console.log(clicked_sequence_length >= playback_length);
+	    //console.log("clicked sequence length:" + clicked_sequence_length);
+	    //console.log("playback length:" + playback_length);
+	    //console.log(clicked_sequence_length >= playback_length);
 
 	    if (clicked_sequence_length >= playback_length) {
+		$('#game img').unbind("click");
 		callback = self.playback;
+		self.clicked_sequence = [];
 	    } else {
+		//console.log("unbind");
 		callback = undefined;
-		
 	    }
-	    
+	    console.log(callback);
 	    self.set_on(color, callback);
 
-	    $('#game img').unbind("click");
-	    console.log(self.clicked_sequence);
+	    //console.log(self.clicked_sequence);
 	},
 	load_answer_key: function(data) {
-	    console.info("got data from server");
-	    console.log(data);
+	    //console.info("got data from server");
+	    //console.log(data);
 	    self.key_sequence = data;
 	    self.playback();
 	},
 	playback: function() {
+	    console.info("playback");
 	    console.log("position:"+self.playback_position);
 	    console.log("limit:"+self.playback_limit);
+	    if (self.playback_limit > self.key_sequence.length) {
+		alert("You win!");
+		return;
+	    }
 	    var delay = (self.playback_position == 0) ? self.switch_playback_mode_delay : 0;
 	    if (self.playback_position < self.playback_limit) {
 		setTimeout(function () {
