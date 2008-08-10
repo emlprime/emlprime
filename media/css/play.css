@@ -2,9 +2,24 @@
 {
 margin-left: 60px;
 margin-top: 50px;
-margin-bottom: 50px;
+margin-bottom: 20px;
 width: 500px;
 text-align: center;
+}
+
+#start_game
+{
+margin: auto;
+margin-bottom: 30px;
+font-size: 2em;
+width: 200px;
+color: blue;
+border: 2px solid black;
+}
+
+#start_game:hover
+{
+background-color: white;
 }
 
 #game

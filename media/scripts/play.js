@@ -6,9 +6,11 @@ emlprime.play = function () {
 	game_over: false,
 	playback_position: 0,
 	playback_limit: 1,
-        click_delay_limit: 5000,  // 5 second pause between clicks
-        playback_delay: 500,     // half second pause between lighting up on playback
-	switch_playback_mode_delay: 2000, // 2 second pause between the last click and playing back the next set
+        click_delay_limit: 3000,  // 3 second pause between clicks
+	click_delay_id: undefined, //sets the timer id for the click delay to undefined
+	playback_delay_id: undefined, //sets the timer id for the playback delay to undefined
+        playback_delay: 300,     // brief pause between lighting up on playback
+	switch_playback_mode_delay: 1500, // short pause between the last click and playing back the next set
         set_on: function(color, callback) {
             // light up a light of the appropriate color
 	    var button = $("#game #" + color + " img"),
@@ -27,7 +29,7 @@ emlprime.play = function () {
 	    src_off = button.attr("src").replace("_light","");
 	    button.attr("src", src_off);
 	    if (typeof callback != 'undefined') {
-		setTimeout(function () { callback(); }, self.playback_delay);
+		self.playback_delay_id = setTimeout(function () { callback(); }, self.playback_delay);
 	    }
 	},
 	click_handler: function (event) {
@@ -53,7 +55,7 @@ emlprime.play = function () {
 		//console.log("unbind");
 		callback = undefined;
 	    }
-	    console.log(callback);
+	    //console.log(callback);
 	    self.set_on(color, callback);
 
 	    //console.log(self.clicked_sequence);
@@ -64,9 +66,13 @@ emlprime.play = function () {
 		    return false;
 		    }
 		}
+	    clearTimeout(self.click_delay_id);
+	    self.click_delay_id = setTimeout(function () {self.end_game();}, self.click_delay_limit)
 	    return true;
 	},
 	end_game: function() {
+	    clearTimeout(self.playback_delay_id);
+	    clearTimeout(self.click_delay_id);
 	    alert("Game Over!");
 	    self.game_over = true;
 	},
@@ -80,16 +86,19 @@ emlprime.play = function () {
 	    if (self.game_over == true) {
 		return;
 	    }
-	    console.info("playback");
-	    console.log("position:"+self.playback_position);
-	    console.log("limit:"+self.playback_limit);
+	    //console.info("playback");
+	    //console.log("position:"+self.playback_position);
+	    //console.log("limit:"+self.playback_limit);
 	    if (self.playback_limit > self.key_sequence.length) {
 		alert("You win!");
+		clearTimeout(self.playback_delay_id);
+		clearTimeout(self.click_delay_id);
 		return;
 	    }
 	    var delay = (self.playback_position == 0) ? self.switch_playback_mode_delay : 0;
 	    if (self.playback_position < self.playback_limit) {
-		setTimeout(function () {
+		clearTimeout(self.click_delay_id);
+		self.playback_delay_id = setTimeout(function () {
 			self.set_on(self.key_sequence[self.playback_position], self.playback);
 			self.playback_position += 1;
 		    },
@@ -99,15 +108,24 @@ emlprime.play = function () {
 		self.playback_position = 0;
 		self.playback_limit += 1;
 		$('#game img').unbind("click").bind("click", self.click_handler);
+		clearTimeout(self.click_delay_id);
+		self.click_delay_id = setTimeout(function () {self.end_game();}, self.click_delay_limit)
 	    }
+	},
+	start_game: function() {
+	    self.clicked_sequence = [];
+	    self.playback_limit = 1;
+	    self.playback_position = 0;
+	    self.game_over = false;
+	    $.getJSON("/play/get_answer_key/", emlprime.play.load_answer_key);	
 	}
     }
     return self;
 }();
 
 function assign_behaviors() {
-    console.log("starting");
-    $.getJSON("/play/get_answer_key/", emlprime.play.load_answer_key);
+    //console.log("starting");
+    $('#start_game').unbind('click').bind('click', emlprime.play.start_game);
 }
     
 $(document).ready(assign_behaviors);
