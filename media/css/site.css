@@ -239,10 +239,11 @@ margin-right: 20px;
 
 #workflow_cycle
 {
+margin: auto;
 margin-top: 2em;
 position: relative;
 font-size: 0.8em;
-width: 640px;
+width: 430px;
 height: 500px;
 }
 
@@ -250,31 +251,32 @@ height: 500px;
 {
 width: 100px;
 position: absolute;
-outline: 1px solid black
+outline: 1px solid black;
+background-color: white;
 }
 
 #workflow_right_arrow_1
 {
-left: 100px;
+left: 105px;
 top: 0px;
 }
 
 #transformation
 {
 top: 0px;
-left: 150px;
+left: 165px;
 }
 
 #workflow_right_arrow_2
 {
-left: 250px;
+left: 270px;
 top: 0px;
 }
 
 #initial_sprint
 {
 top: 0px;
-left: 300px;
+left: 330px;
 }
 
 .workflow_arrow
@@ -284,115 +286,101 @@ position: absolute;
 
 #workflow_top_arrow_2
 {
-left: 330px;
-top: 70px;
+left: 360px;
+top: 80px;
 }
 
 #assign_sprint_tasks
 {
-top: 120px;
-left: 300px;
+top: 140px;
+left: 330px;
 }
 
-#workflow_left_top_arrow_1
+#workflow_left_arrow_1
 {
-top: 135px;
-left: 250px;
+top: 145px;
+left: 268px;
 }
 
 #write_tests
 {
-top: 150px;
-left: 150px;
+top: 140px;
+left: 165px;
 }
 
-#workflow_left_top_arrow_2
+#workflow_left_arrow_2
 {
-top: 170px;
-left: 100px;
+top: 145px;
+left: 103px;
 }
 
 #write_code
 {
-top: 200px;
+top: 140px;
 }
 
 #workflow_top_arrow_1
 {
-top: 270px;
+top: 220px;
 left: 25px;
 }
 
 #update_burndown
 {
 left: 0px;
-top: 325px;
+top: 280px;
 }
 
-#workflow_left_bottom_arrow_1
+#workflow_top_arrow_3
 {
-top: 380px;
-left: 80px;
+top: 350px;
+left: 25px;
 }
 
 #present_stories
 {
-left: 130px;
+left: 0px;
 top: 410px;
 }
 
 #workflow_right_arrow_3
 {
-left: 230px;
+left: 104px;
 top: 415px;
 }
 
 #story_approval
 {
-left: 285px;
-top: 420px;
+left: 165px;
+top: 425px;
 }
 
-#workflow_right_bottom_arrow_1
+#workflow_right_arrow_4
 {
-left: 385px;
-top: 410px;
+left: 270px;
+top: 415px;
 }
 
 #get_paid
 {
-left: 420px;
-top: 365px;
+left: 330px;
+top: 415px;
 }
 
-#workflow_right_bottom_arrow_2
+#workflow_up_arrow_1
 {
-left: 470px;
-top: 325px;
-}
 
-#add_ideas
-{
-left: 470px;
-top: 280px;
-}
-
-#workflow_right_top_arrow_1
-{
-left: 500px;
-top: 240px;
 }
 
 #design_next_sprint
 {
-left: 450px;
-top: 190px;
+left: 330px;
+top: 280px;
 }
 
-#workflow_right_top_arrow_2
+#workflow_up_arrow_2
 {
-left: 400px;
-top: 160px;
+
 }
 
 .projects
