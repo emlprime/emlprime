@@ -78,7 +78,7 @@ emlprime.play = function () {
 	},
 	load_answer_key: function(data) {
 	    //console.info("got data from server");
-	    console.log(data);
+	    //console.log(data);
 	    self.key_sequence = data;
 	    self.playback();
 	},

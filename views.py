@@ -18,7 +18,7 @@ def detail(request):
         if form.is_valid():
             project=form.save()
             message =  "%s\n%s\n%s" % (project.name, project.email, project.description)
-            #mail_admins('Project Request Submitted', message, fail_silently=False)
+            mail_admins('Project Request Submitted', message, fail_silently=False)
             return HttpResponseRedirect("/work/create/")
         else:
             errors=form.errors
