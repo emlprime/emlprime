@@ -24,9 +24,9 @@
     <div id="content">
       <div id="navigation">
 	
-	<p id="work">{% ifequal current_url "/work/" %}Work{% else %}<a href="/work/">Work</a>{% endifequal %}</p>
-	<p id="us">{% ifequal current_url "/us/" %}Us{% else %}<a href="/us/">Us</a>{% endifequal %}</p>
-	<p id="play">{% ifequal current_url "/play/" %}Play{% else %}<a href="/play/">Play</a>{% endifequal %}</p>
+	<p id="work">{% ifequal current_url "/work/" %}<img src="/media/images/work.png" alt="Work" />{% else %}<a href="/work/"><img src="/media/images/work.png" alt="Work" /></a>{% endifequal %}</p>
+	<p id="us">{% ifequal current_url "/us/" %}<img src="/media/images/us.png" alt="Us" />{% else %}<a href="/us/"><img src="/media/images/us.png" alt="Us" /></a>{% endifequal %}</p>
+	<p id="play">{% ifequal current_url "/play/" %}<img src="/media/images/play.png" alt="Play" />{% else %}<a href="/play/"><img src="/media/images/work.png" alt="Play" /></a>{% endifequal %}</p>
     </div>
     {% block content %}
     {% endblock %}

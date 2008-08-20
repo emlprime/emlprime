@@ -8,7 +8,7 @@
 body
 {
 				font-family: arial;
-				background-image: url("/media/images/background.jpg");
+				background-color: #dbc6af;
 				color: black;
                 width: 800px;
                 margin: auto;
@@ -39,7 +39,6 @@ background-image: url("/media/images/footer.png");
 {
 position: absolute;
 top: 0px;
-color: #0000c9;
 }
 
 #phone_number
@@ -84,7 +83,8 @@ left: 290px;
 
 #content
 {
-				background-image: url("/media/images/content.jpg");
+				background-color: white;
+                                border: 2px solid black;
 				margin: auto;
 				width: 640px;
 				color: black;
@@ -93,7 +93,7 @@ left: 290px;
 a:link, a:visited, a:hover, a:active
 {
 				text-decoration: none;
-				color: #0000c9;
+  color: black;
 }
 
 #mission_statement
