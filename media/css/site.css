@@ -31,7 +31,8 @@ position: relative;
 
 #footer
 {
-width: 620px;
+width: 600px;
+margin: auto;
 position: relative;
 background-image: url("/media/images/footer.png");
 }
@@ -44,12 +45,12 @@ top: 0px;
 
 #phone_number
 {
-left: 260px;
+left: 240px;
 }
 
 #copyright
 {
-right: 10px;
+right: 0px;
 }
 
 #index
