@@ -369,7 +369,7 @@ top: 415px;
 
 #workflow_up_arrow_1
 {
-
+outline: 1px solid red;
 }
 
 #design_next_sprint
@@ -380,7 +380,7 @@ top: 280px;
 
 #workflow_up_arrow_2
 {
-
+outline: 1px solid red;
 }
 
 .projects
