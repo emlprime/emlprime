@@ -7,9 +7,10 @@
 
 body
 {
-				font-family: arial;
-				background-color: #dbc6af;
-				color: black;
+		font-family: helvetica, arial;
+                font-size: 15px; 
+		background-image: url("/media/images/background.png");
+		color: black;
                 width: 800px;
                 margin: auto;
                 text-align: center;
@@ -32,25 +33,19 @@ position: relative;
 #footer
 {
 width: 600px;
+height: 50px;
 margin: auto;
+margin-top: 1em;
 position: relative;
 background-image: url("/media/images/footer.png");
 }
 
-#email, #phone_number, #copyright
+#footer span
 {
-position: absolute;
-top: 0px;
-}
-
-#phone_number
-{
-left: 240px;
-}
-
-#copyright
-{
-right: 0px;
+position: relative;
+top: 15px;
+margin: 10px;
+font-weight: bold;
 }
 
 #index
@@ -91,6 +86,11 @@ right: 0px;
 				color: black;
 }
 
+#content a
+{
+font-weight: bold;
+}
+
 a:link, a:visited, a:hover, a:active
 {
 				text-decoration: none;
@@ -108,24 +108,29 @@ a:link, a:visited, a:hover, a:active
 				padding: 2em;
 }
 
-#work_snippet, #us_snippet, #play_snippet
+#snippets p
+{
+text-align: justify;
+}
+
+.work, .us, .play
 {
 				position: absolute;
-				width: 150px;
+				width: 170px;
 				top: 0px;
 }
 
-#work_snippet
+.work
 {
 				left: 20px;
 }
 
-#us_snippet
+.us
 {
 				left: 220px;
 }
 
-#play_snippet
+.play
 {
 				left: 420px;
 }
@@ -141,7 +146,7 @@ margin-top: 2em;
 margin-bottom: 2em;
 position: relative;
 width: 640px;
-height: 400px;
+height: 450px;
 }
 
 #initial_conversation, #sprint_cycle, #approval_cycle
@@ -173,14 +178,14 @@ top: 150px;
 #arrow_right
 {
 position: absolute;
-top: 160px;
+top: 180px;
 left: 70px;
 }
 
 #arrow_left
 {
 position: absolute;
-top: 190px;
+top: 200px;
 right: 70px;
 }
 
@@ -202,6 +207,8 @@ position: relative;
 #project_form label
 {
 float: left;
+text-align: right;
+font-weight: bold;
 margin-right: 10px;
 width: 80px;
 }
@@ -217,18 +224,28 @@ outline: 1px solid black;
 width: 280px;
 }
 
+#project_form_container
+{
+position: relative;
+margin-bottom: 100px;
+}
+
 #project_submit
 {
-right: 170px;
-bottom: 10px;
-position: absolute;;
-text-align: center;
+position: relative;
+left: 150px;
 }
 
 #project_confirmation
 {
 height: 200px;
 margin-top: 50px;
+}
+
+#project_form p
+{
+clear: both;
+margin-bottom: 10px;
 }
 
 #workflow_explanation
@@ -370,7 +387,8 @@ top: 415px;
 
 #workflow_up_arrow_1
 {
-outline: 1px solid red;
+left: 360px;
+top: 215px;
 }
 
 #design_next_sprint
@@ -381,7 +399,8 @@ top: 280px;
 
 #workflow_up_arrow_2
 {
-outline: 1px solid red;
+left: 360px;
+top: 350px;
 }
 
 .projects
