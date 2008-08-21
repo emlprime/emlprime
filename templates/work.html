@@ -17,9 +17,10 @@
 	<img src="/media/images/arrow_left.png" class="arrow" id="arrow_left" />
   </div>
 </a>
-
+<div id="project_form_container">
 <form method="post" id="project_form" action="/project/create/">
   {{ form.as_p }}
-  <input id="project_submit" type="image" src="/media/images/submit.png" alt="submit" />  
+  <p><input id="project_submit" type="image" src="/media/images/submit.png" alt="submit" />  </p>
 </form>
+</div>
 {% endblock %}
