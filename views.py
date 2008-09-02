@@ -18,7 +18,11 @@ def detail(request):
         if form.is_valid():
             project=form.save()
             message =  "%s\n%s\n%s" % (project.name, project.email, project.description)
-            mail_admins('Project Request Submitted', message, fail_silently=False)
+            # try to send mail. If it fails print out an error
+            try:
+                mail_admins('Project Request Submitted', message, fail_silently=False)
+            except:
+                print "Error: could not send mail to admins"
             return HttpResponseRedirect("/work/create/")
         else:
             errors=form.errors

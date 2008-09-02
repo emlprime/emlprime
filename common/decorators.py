@@ -15,7 +15,7 @@ def ajax_or_http_response(view):
     def _handle_response(request, *args, **kwargs):
         result = view(request, *args, **kwargs)
         # if this is a redirect, just pass it through
-        if isinstance(result, HttpResponseRedirect):
+        if not isinstance(result, dict):
             return result
         context = single_display_session_values(request, result)
         if is_ajax(request):

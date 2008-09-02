@@ -14,25 +14,24 @@ class TestStatic(CommonTestCase):
 
         She should...
         """
+        alice = self.alice
         urls = ["/work/", "/us/", "/play/"]
         expected_titles = ["work", "us", "play"]
         expected_titles.sort()
         # see all three navigation titles on each page
         for url in urls:
             doc = self.alice.clicks_a_link(url)
-            titles = doc.find(id="navigation").findAll("p")
-            displayed_titles = [t.string.lower().strip() if t.string else t.a.string.lower() for t in titles]
-            displayed_titles.sort()
-            self.failUnlessEqual(displayed_titles, expected_titles)
+            links = [("/work/","/media/images/work.png"), ("/us/","/media/images/us.png"), ("/play/", "/media/images/play.png")]
+            navigation = doc.find(id="navigation")
+            displayed_links = navigation.findAll("a")
+            for href, src in links:
+                if href != url:
+                    alice.sees_a_link(navigation, href, src)
             # see links to all three sections except to the current page
-            for title in titles:
-                # grabbing just the strings out of the titles
-                title_string = title.string.lower().strip() if title.string else title.a.string.lower().strip()
-                if title_string in url:
-                    self.failUnless(not title.find("a"), "%s should not be a link on its own page" % title_string)
-                else:
-                    self.failUnless(title.find("a"), "%s should have a link on this page: %s" % (title_string, url))
-
+            current_page_is_linked = False
+            for link in displayed_links:
+                self.failUnless(url not in link["href"], "%s should not be a link on its own page" % url)
+        
     def test_home_page(self):
         """ Alice goes to www.emlprime.com
 
@@ -48,12 +47,6 @@ class TestStatic(CommonTestCase):
         self.failUnlessEqual(logo.find('img')["alt"], "EMLPrime")
         logo_image = doc.find(id="logo").find(src="/media/images/logo.png")
         self.failUnless(logo_image, "Could not find %s" % logo.png)
-
-        # see the navigation links
-        links = [("/work/","/media/images/work.png"), ("/us/","/media/images/us.png"), ("/play/", "/media/images/play.png")]
-        navigation = doc.find(id="navigation")
-        for href, src in links:
-            alice.sees_a_link(navigation, href, src)
 
         # see the mission statement and work, us, and play snippets
         mission_statement = doc.find(id="mission_statement")
@@ -86,12 +79,11 @@ class TestStatic(CommonTestCase):
         self.failUnless(approval_cycle, "Could not find %s" % approval_cycle)
         # submit a project request using the form
         self.alice.sees_a_form(doc, "project")
-        self.alice.sees_a_submit_button(doc, "project")
         self.alice.submits_a_form(doc, "project", {'name':'test', 'email':'test@emlprime.com', 'description':'test project'})
         self.failUnlessEqual(Project.objects.get().name, 'test')
         # check that email is sent
-#        print "outbox:", mail.outbox[0].subject
-#        print "outbox:", mail.outbox[0].message()
+        # print "outbox:", mail.outbox[0].subject
+        # print "outbox:", mail.outbox[0].message()
 
     def test_workflow_page(self):
         """ Alice goes to www.emlprime.com/work and clicks on the link to the sample workflow
@@ -103,39 +95,18 @@ class TestStatic(CommonTestCase):
         templates_used = ["sample_workflow.html"]
         doc = alice.clicks_a_link("/work/sample_workflow/", templates_used=templates_used)
         # see the divs for the initial stage, sprint cycle, and approval cycle
-        initial_stage=doc.find(id="workflow_initial_stage")
-        self.failUnless(initial_stage, "could not find initial stage")
-        sprint_cycle=doc.find(id="workflow_sprint_cycle")
-        self.failUnless(sprint_cycle, "could not find sprint cycle")
-        approval_cycle=doc.find(id="workflow_approval_cycle")
-        self.failUnless(approval_cycle, "could not find approval cycle")
+        elements = ["workflow_initial_stage", "workflow_sprint_cycle", "workflow_approval_cycle"]
         # see the great idea, transformation, and initial sprint divs inside the initial stage
-        great_idea=doc.find(id="workflow_initial_stage").find(id="great_idea")
-        self.failUnless(great_idea, "could not find great_idea")
-        transformation=doc.find(id="workflow_initial_stage").find(id="transformation")
-        self.failUnless(transformation, "could not find transformation")
-        initial_sprint=doc.find(id="workflow_initial_stage").find(id="initial_sprint")
-        self.failUnless(initial_sprint, "could not find initial_sprint")
+        elements += ["great_idea", "transformation", "initial_sprint"]
+
         # see the assign sprint, write tests, write code, update burndown, and present stories inside the sprint cycle
-        assign_sprint_tasks=doc.find(id="workflow_sprint_cycle").find(id="assign_sprint_tasks")
-        self.failUnless(assign_sprint_tasks, "could not find assign_sprint_tasks")
-        write_tests=doc.find(id="workflow_sprint_cycle").find(id="write_tests")
-        self.failUnless(write_tests, "could not find write_tests")
-        write_code=doc.find(id="workflow_sprint_cycle").find(id="write_code")
-        self.failUnless(write_code, "could not find write_code")
-        update_burndown=doc.find(id="workflow_sprint_cycle").find(id="update_burndown")
-        self.failUnless(update_burndown, "could not find update_burndown")
-        present_stories=doc.find(id="workflow_sprint_cycle").find(id="present_stories")
-        self.failUnless(present_stories, "could not find present_stories")
+        elements += ["assign_sprint_tasks", "write_tests","write_code","update_burndown", "present_stories"]
+
         # see the story approval, get paid, add ideas, groom backlog, and design next sprint inside the approval cycle
-        story_approval=doc.find(id="workflow_approval_cycle").find(id="story_approval")
-        self.failUnless(story_approval, "could not find story_approval")
-        get_paid=doc.find(id="workflow_approval_cycle").find(id="get_paid")
-        self.failUnless(get_paid, "could not find get_paid")
-        add_ideas=doc.find(id="workflow_approval_cycle").find(id="add_ideas")
-        self.failUnless(add_ideas, "could not find add_ideas")
-        design_next_sprint=doc.find(id="workflow_approval_cycle").find(id="design_next_sprint")
-        self.failUnless(design_next_sprint, "could not find design_next_sprint")
+        elements += ["story_approval", "get_paid", "design_next_sprint"]
+
+        for element in elements:
+            alice.sees_an_element(doc, id=element)
         # see a link on the great idea div that links back to the work page
         link = doc.find(id="workflow_initial_stage").find(href="/work/")
         self.failUnless(link, "could not find link from workflow back to project form")
