@@ -42,41 +42,31 @@ class TestStatic(CommonTestCase):
         # see the homepage
         templates_used = ["index.html", "base.html"]
         doc = alice.clicks_a_link("/", templates_used=templates_used)
+
         # see the page with the logo
         logo = doc.find(id="logo")
         self.failUnlessEqual(logo.find('img')["alt"], "EMLPrime")
         logo_image = doc.find(id="logo").find(src="/media/images/logo.png")
         self.failUnless(logo_image, "Could not find %s" % logo.png)
+
         # see the navigation links
-        work = doc.find(src="/media/images/work.png")
-        work_link = doc.find(id="navigation").find(href="/work/")
-        self.failUnless(work_link, "Could not find link to %s" % work)
-        us = doc.find(src="/media/images/us.png")
-        us_link = doc.find(id="navigation").find(href="/us/")
-        self.failUnless(us_link, "Could not find link to %s" % us)
-        play = doc.find(src="/media/images/play.png")
-        play_link = doc.find(id="navigation").find(href="/play/")
-        self.failUnless(play_link, "Could not find link to %s" % play)
+        links = [("/work/","/media/images/work.png"), ("/us/","/media/images/us.png"), ("/play/", "/media/images/play.png")]
+        navigation = doc.find(id="navigation")
+        for href, src in links:
+            alice.sees_a_link(navigation, href, src)
+
         # see the mission statement and work, us, and play snippets
         mission_statement = doc.find(id="mission_statement")
         self.failUnless(mission_statement, "Could not find %s" % mission_statement)
-        work_snippet = doc.find(id="work_snippet")
-        self.failUnless(work_snippet, "Could not find %s" % work_snippet)
-        us_snippet = doc.find(id="us_snippet")
-        self.failUnless(us_snippet, "Could not find %s" % us_snippet)
-        play_snippet = doc.find(id="play_snippet")
-        self.failUnless(play_snippet, "Could not find %s" % play_snippet)
-        # see the footer with email and phone from settings and the current year copyright
-        email = doc.find(id="footer").find(id="email")
-        self.failUnless(email, "Could not find email")
-        self.failUnlessEqual(email.a.string, settings.FOOTER_DATA["email"])
-        phone_number = doc.find(id="footer").find(id="phone_number")
-        self.failUnless(phone_number, "Could not find phone_number")
-        self.failUnlessEqual(phone_number.p.string, settings.FOOTER_DATA["phone_number"])
-        copyright = doc.find(id="footer").find(id="copyright")
-        self.failUnless(copyright, "Could not find play_snippet")
-        self.failUnlessEqual(copyright.p.string, settings.FOOTER_DATA["copyright"])
+        snippets = ["work","us","play"]
+        for snippet in snippets:
+            self.alice.sees_an_element(doc, "div", snippet)
 
+        # see the footer with email and phone from settings and the current year copyright
+        footer = doc.find(id="footer")
+        for key, value in settings.FOOTER_DATA.items():
+            span = footer.find(id=key)
+            self.alice.sees_a_string(span, value)
 
     def test_work_page(self):
         """ Alice goes to www.emlprime.com and follows the link to the work page

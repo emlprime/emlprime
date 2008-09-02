@@ -59,6 +59,60 @@ class Actor(TestCase):
         # return a BeautifulSoup document for navigating
         return BeautifulSoup(response.content)
 
+    def sees_an_element(self, doc, element=None, css_class=None, id=None):
+        """ Tests for the presence of a specified element on the current page...
+
+        self.alice.sees_an_element(doc, id="element_id")
+        self.alice.sees_an_element(doc, "element")
+        self.alice.sees_an_element(doc, "div", "element_css_class")
+        """
+        if id:
+            displayed_element=doc.find(id=id)
+        else:
+            if css_class:
+                displayed_element=doc.find(element, css_class)
+            else:
+                displayed_element=doc.find(element)
+        self.failUnless(displayed_element, "Could not find %s" % displayed_element)
+        return displayed_element
+
+    def sees_a_link(self, doc, href, src=None):
+        """Tests for the presence of a link, and optionally tests for the presence of the link's image 
+        
+        self.alice.sees_a_link(doc, "/page/")
+        self.alice.sees_a_link(doc, "/page/", src="/media/images/link_image.png")
+        """
+        # look for a link in the doc with the expected href
+        link = doc.find(href=href)
+        self.failUnless(link, "Could not find link to %s" % href)
+
+        # if there is an image being linked, look for the image in the link
+        if src:
+            image = link.find(src=src)
+            self.failUnless(image, "Could not find the image %s" % src)
+        return link
+            
+    def sees_a_string(self, doc, expected_string):
+        """Tests for the presence of a particular string within the doc...
+        
+        self.alice.sees_a_string(doc, "my string")
+        would succeed on the following html snippets:
+        <p>my string</p>
+        <p>this is my string.</p>        
+        <p>here is <a href="/whatever/">my string</a></p>
+        """
+        found = False
+        links = doc.findAll("a")
+        for link in links:
+            if expected_string in link.string:
+                found=True
+                break
+        if not found:
+            if doc.string and expected_string in doc.string:
+                found = True
+        self.failUnless(found, "Could not find %s in:\n%s" % (expected_string, doc))
+        return found
+
     def submits_a_form(self, doc, form_css_id, post_data={}, errors={}, verbose=True, follow_redirects=True, input_type="submit"):
         """ Simulate submitting a form with a POST using the test client
 
