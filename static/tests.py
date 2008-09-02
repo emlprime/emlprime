@@ -121,30 +121,11 @@ class TestStatic(CommonTestCase):
         templates_used = ["us.html"]
         doc = alice.clicks_a_link("/us/", templates_used=templates_used)
         # see the initial conversation, sprint cycle, and approval cycle portions of the project diagram
-        mug_shot = doc.find(id="mug_shot")
-        self.failUnless(mug_shot, "Could not find %s" % mug_shot)
-        personal_info = doc.find(id="personal_info")
-        self.failUnless(personal_info, "Could not find %s" % personal_info)
-        experience = doc.find(id="experience")
-        self.failUnless(experience, "Could not find %s" % experience)
-        personality = doc.find(id="personality")
-        self.failUnless(personality, "Could not find %s" % personality)
-        hobbies = doc.find(id="hobbies")
-        self.failUnless(hobbies, "Could not find %s" % hobbies)
+        elements = ["mug_shot", "personal_info", "experience", "personality", "hobbies"]
         # see the name, email, and favorite bribe in the personal info section
-        name = doc.find(id="personal_info").find(id="name")
-        self.failUnless(name, "Could not find %s" % name)
-        email = doc.find(id="personal_info").find(id="contact_email")
-        self.failUnless(email, "Could not find %s" % email)
-        favorite_bribe = doc.find(id="personal_info").find(id="favorite_bribe")
-        self.failUnless(favorite_bribe, "Could not find %s" % favorite_bribe)
-        # see the languages, skills, and finished projects in the experience div
-        languages = doc.find(id="experience").find(id="languages")
-        self.failUnless(languages, "Could not find %s" % languages)
-        skills = doc.find(id="experience").find(id="skills")
-        self.failUnless(skills, "Could not find %s" % skills)
-        finished_projects = doc.find(id="experience").find(id="finished_projects")
-        self.failUnless(finished_projects, "Could not find %s" % finished_projects)
+        elements += ["name", "contact_email",  "favorite_bribe", "languages", "skills", "finished_projects"]
+        for element in elements:
+            alice.sees_an_element(doc, id=element)
 
     def test_play_page(self):
         """ Alice goes to www.emlprime.com and clicks the link to the play page
@@ -156,16 +137,11 @@ class TestStatic(CommonTestCase):
         templates_used = ["play.html"]
         doc = alice.clicks_a_link("/play/", templates_used=templates_used)
         # see the game background and the four colors
-        green = doc.find(id="game").find(id="green")
-        self.failUnless(green, "Could not find green")
-        red = doc.find(id="game").find(id="red")
-        self.failUnless(red, "Could not find red")
-        blue = doc.find(id="game").find(id="blue")
-        self.failUnless(blue, "Could not find blue")
-        yellow = doc.find(id="game").find(id="yellow")
-        self.failUnless(yellow, "Could not find yellow")
+        elements = ["game", "green", "red", "blue", "yellow"]
+        for element in elements:
+            alice.sees_an_element(doc, id=element)
+        # tests the answer key list provided to jquery
         response = alice.client.get("/play/get_answer_key/")
         displayed_list = simplejson.loads(response.content)
-
         self.failUnlessEqual(type(displayed_list), list)
         self.failUnlessEqual(len(displayed_list), 50)
