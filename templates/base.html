@@ -9,66 +9,40 @@
     <link rel="stylesheet" type="text/css" href="/media/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="/media/css/text.css" />
     <link rel="stylesheet" type="text/css" href="/media/css/960.css" />
-<style type="text/css" media="all">
+    <style type="text/css" media="all">
 
-div, h1 {
-  outline: 1px dashed green;
-}
-.container_16
-{
-	background: #fff url("/media/images/16_col.gif") repeat-y;
-	margin-bottom: 20px;
-height: 400px;
-}
+      h1 {
+      text-align: center;
+      }
 
-h1 {
-    text-align: center;
-}
+    </style>
 
-</style>
-
-{% comment %}
     <link rel="stylesheet" type="text/css" href="/media/css/site.css" />
     <link rel="stylesheet" type="text/css" href="/media/css/play.css" />
     <script type="text/javascript" src="/media/scripts/jquery-1.2.3.min.js"></script>
     <script type="text/javascript" src="/media/scripts/play.js"></script>
-{% endcomment %}
     
   </head>
   <body>
     <div class="container_16">
       
-    <div class="grid_2">&nbsp;</div>
-    <h1 id="logo" class="grid_12">
-      <a href="/"><img src="/media/images/logo.png" alt="EMLPrime" /></a>
-    </h1>
+      <div class="grid_2">&nbsp;</div>
+      <h1 id="logo" class="grid_12">
+	<a href="/"><img src="/media/images/logo.png" alt="EMLPrime" /></a>
+      </h1>
 
-    <div class="clear">&nbsp;</div>
-
-    <div id="container" class="grid_16">
-    {% block left_navigation %}
-    <div class="grid_2 prefix_1 navigation left alpha">
-            left navigation
+      <div class="clear">&nbsp;</div>
+      <div id="container" class="grid_16">
+	<div class="grid_1 alpha">&nbsp;</div>
+	<div id="paper" class="grid_14 omega">
+	  {% block left_navigation %} left navigation {% endblock %}
+	  <div id="content" class="grid_10">
+	    {% block content %} BLOCK CONTENT {% endblock %}
+	  </div>
+	  {% block right_navigation %} right navigation {% endblock %}
+	</div>
+      </div>
     </div>
-    {% endblock %}
-    <div id="content" class="grid_10">
-      {% block content %}
-      BLOCK CONTENT
-      {% endblock %}
-    </div>
-    {% block right_navigation %}
-    <div class="grid_2 suffix_1 navigation right omega">
-      right navigation
-    </div>
-    {% endblock %}
-    </div>
-    {% comment %}
-    <div id="navigation">
-      <div id="work">{% ifequal current_url "/work/" %}<img src="/media/images/work.png" alt="Work" />{% else %}<a href="/work/"><img src="/media/images/work.png" alt="Work" /></a>{% endifequal %}</div>
-      <div id="us">{% ifequal current_url "/us/" %}<img src="/media/images/us.png" alt="Us" />{% else %}<a href="/us/"><img src="/media/images/us.png" alt="Us" /></a>{% endifequal %}</div>
-      <div id="play">{% ifequal current_url "/play/" %}<img src="/media/images/play.png" alt="Play" />{% else %}<a href="/play/"><img src="/media/images/play.png" alt="Play" /></a>{% endifequal %}</div>
-    </div>
-    
     {% footer %}
     <script type="text/javascript">
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -78,6 +52,6 @@ h1 {
       var pageTracker = _gat._getTracker("UA-88241-1");
       pageTracker._trackPageview();
     </script>
-{% endcomment %}
+    
   </body>
 </html>

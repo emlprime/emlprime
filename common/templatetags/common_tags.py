@@ -9,3 +9,6 @@ register = template.Library()
 def footer():
     return settings.FOOTER_DATA
 
+@register.inclusion_tag("tab.html")
+def tab(section, section_link, position):
+    return locals()
