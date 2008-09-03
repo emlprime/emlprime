@@ -1,4 +1,26 @@
 {% extends "base.html" %}
+
+{% load common_tags %}
+
+{% block left_navigation %}
+<div class="grid_1 navigation alpha">
+{% tab "home" "/" "first" %} 
+</div>
+<div class="grid_1 navigation">
+{% tab "work" "/work/" "second" %}
+</div>
+{% endblock %}
+
+{% block right_navigation %}
+<div class="grid_1 navigation">
+{% tab "us" "/us/" "third" %} 
+</div>
+<div class="grid_1 navigation omega">
+{% tab "play" "/play/" "fourth" %} 
+</div>
+{% endblock %}
+
+
 {% block content %}
 <p id="scrum_intro">Here's a simple chart describing our scrum workflow.  Click the chart for a more detailed flow chart.  If you are ready to submit a project idea to us, fill out the form below, and we will review the project and help you begin making the backlog of features you want.</p>
 <a href="/work/sample_workflow/">

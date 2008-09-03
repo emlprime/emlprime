@@ -1,5 +1,25 @@
 {% extends "base.html" %}
 
+{% load common_tags %}
+
+{% block left_navigation %}
+<div class="grid_1 navigation alpha">
+{% tab "home" "/" "first" %} 
+</div>
+<div class="grid_1 navigation">
+{% tab "work" "/work/" "second" %}
+</div>
+<div class="grid_1 navigation">
+{% tab "us" "/us/" "third" %} 
+</div>
+<div class="grid_1 navigation omega">
+{% tab "play" "/play/" "fourth" %} 
+</div>
+{% endblock %}
+
+{% block right_navigation %}
+{% endblock %}
+
 {% block content %}
 <div id="rules">
 <p>The red, green, yellow, and blue lights will light up in a random pattern, starting with just one light and incrementing by one more light each round.  Once the pattern for the round has been presented, click the lights to mimic the pattern that was presented.  If you succeed, you will advance to the next round.  If you complete all 50 rounds, you win!</p>
