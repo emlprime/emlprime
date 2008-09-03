@@ -17,4 +17,5 @@ urlpatterns += patterns("emlprime.views",
     (r'^play/$', 'play'),
     (r'^play/get_answer_key/$', 'get_answer_key'),
     (r'^work/sample_workflow/$', 'sample_workflow'),
+    (r'^work/rates/$', 'rates'),
 )

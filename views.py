@@ -66,3 +66,10 @@ def sample_workflow(request):
     """
     template = "sample_workflow.html"
     return locals()
+
+@ajax_or_http_response
+def rates(request):
+    """ Displays our rates and services
+    """
+    template = "rates.html"
+    return locals()
