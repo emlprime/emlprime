@@ -1,26 +1,18 @@
-{% extends "base.html" %}
+{% extends "work_section.html" %}
+
 {% block content %}
-<p id="scrum_intro">Here's a simple chart describing our scrum workflow.  Click the chart for a more detailed flow chart.  If you are ready to submit a project idea to us, fill out the form below, and we will review the project and help you begin making the backlog of features you want.</p>
-<a href="/work/sample_workflow/">
-  <div id="cycle">
-	<div id="initial_conversation">
-      <p>You present your idea to us.  We work with you to make a backlog of all the features you want.</p>
-	</div>
-	<img src="/media/images/arrow_top.png" class="arrow" id="arrow_top" />
-	<div id="sprint_cycle">
-      <p>You decide which features are most important to you right away.  We make a two- or four-week cycle, during which we implement those features.</p>
-	</div>
-	<img src="/media/images/arrow_right.png" class="arrow" id="arrow_right" />
-	<div id="approval_cycle">
-      <p>You review our work and check to see that each feature is implemented the way you want it.  We get paid, and we work with you to choose the features for the next sprint.</p>
-	</div>
-	<img src="/media/images/arrow_left.png" class="arrow" id="arrow_left" />
-  </div>
-</a>
+<p id="scrum_intro">We use the scrum project management system to manage our projects.  To learn about scrum and how it helps us deliver your project on time and on budget, click the <a href="/work/sample_workflow/">'Scrum'</a> link.  To see a list of our rates and services, click the <a href="/work/rates/">'Rates'</a> link.  If you are ready to submit a project idea to us, fill out the form below, and we will review the project and help you begin making the backlog of features you want.</p>
 <div id="project_form_container">
 <form method="post" id="project_form" action="/project/create/">
   {{ form.as_p }}
-  <p><input id="project_submit" type="image" src="/media/images/submit.png" alt="submit" />  </p>
+  <p><input id="project_submit" type="image" src="/media/images/submit.png" alt="submit" class="submit" />  </p>
 </form>
+</div>
+
+<div class="corner grid_2 prefix_7">
+<a href="/work/sample_workflow/"><img src="/media/images/scrum_corner.png" id="scrum_corner" /></a>
+</div>
+<div class="corner grid_2 prefix_7">
+<a href="/work/rates/"><img src="/media/images/rates_corner.png" id="rates_corner" /></a>
 </div>
 {% endblock %}

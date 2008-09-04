@@ -1,4 +1,25 @@
 {% extends "base.html" %}
+{% load common_tags %}
+
+{% block left_navigation %}
+<div class="grid_1 navigation alpha">
+{% tab "home" "/" "first" %} 
+</div>
+{% endblock %}
+
+{% block right_navigation %}
+<div class="grid_1 navigation">
+{% tab "work" "/work/" "second" %}
+</div>
+<div class="grid_1 navigation">
+{% tab "us" "/us/" "third" %} 
+</div>
+<div class="grid_1 navigation omega">
+{% tab "play" "/play/" "fourth" %} 
+</div>
+{% endblock %}
+
+
 {% block content %}
 <div id="index">
   <div id="mission_statement">
@@ -17,3 +38,4 @@
   </div>
 </div>
 {% endblock %}
+

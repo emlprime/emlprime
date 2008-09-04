@@ -4,6 +4,19 @@
   <head>
     <title>EMLPrime</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-859-1" />
+
+    <!-- 960 css -->
+    <link rel="stylesheet" type="text/css" href="/media/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/media/css/text.css" />
+    <link rel="stylesheet" type="text/css" href="/media/css/960.css" />
+    <style type="text/css" media="all">
+
+      h1 {
+      text-align: center;
+      }
+
+    </style>
+
     <link rel="stylesheet" type="text/css" href="/media/css/site.css" />
     <link rel="stylesheet" type="text/css" href="/media/css/play.css" />
     <script type="text/javascript" src="/media/scripts/jquery-1.2.3.min.js"></script>
@@ -11,35 +24,34 @@
     
   </head>
   <body>
-    <a href="/">
-      <div id="header">
-		{% block header %}
-		<h1>EML'</h1>
-		{% endblock header %}
+    <div class="container_16">
+      
+      <div class="grid_2">&nbsp;</div>
+      <h1 id="logo" class="grid_12">
+	<a href="/"><img src="/media/images/logo.png" alt="EMLPrime" /></a>
+      </h1>
+
+      <div class="clear">&nbsp;</div>
+      <div id="container" class="grid_16">
+	<div class="grid_1 alpha">&nbsp;</div>
+	<div id="paper" class="grid_14 omega">
+	  {% block left_navigation %} left navigation {% endblock %}
+	  <div id="content" class="grid_10">
+	    {% block content %} BLOCK CONTENT {% endblock %}
+	  </div>
+	  {% block right_navigation %} right navigation {% endblock %}
+	</div>
       </div>
-    </a>
-    <div id="logo">
-      <a href="/"><img src="/media/images/logo.png" alt="EMLPrime" /></a>
-    </div>
-	
-    <div id="navigation">
-	  <div id="work">{% ifequal current_url "/work/" %}<img src="/media/images/work.png" alt="Work" />{% else %}<a href="/work/"><img src="/media/images/work.png" alt="Work" /></a>{% endifequal %}</div>
-	  <div id="us">{% ifequal current_url "/us/" %}<img src="/media/images/us.png" alt="Us" />{% else %}<a href="/us/"><img src="/media/images/us.png" alt="Us" /></a>{% endifequal %}</div>
-	  <div id="play">{% ifequal current_url "/play/" %}<img src="/media/images/play.png" alt="Play" />{% else %}<a href="/play/"><img src="/media/images/play.png" alt="Play" /></a>{% endifequal %}</div>
-    </div>
-	
-    <div id="content">
-      {% block content %}
-      {% endblock %}
     </div>
     {% footer %}
-	<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-88241-1");
-pageTracker._trackPageview();
-</script>
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      var pageTracker = _gat._getTracker("UA-88241-1");
+      pageTracker._trackPageview();
+    </script>
+    
   </body>
 </html>

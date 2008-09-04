@@ -59,6 +59,64 @@ class Actor(TestCase):
         # return a BeautifulSoup document for navigating
         return BeautifulSoup(response.content)
 
+    def sees_an_element(self, doc, element=None, css_class=None, id=None):
+        """ Tests for the presence of a specified element on the current page...
+
+        self.alice.sees_an_element(doc, id="element_id")
+        self.alice.sees_an_element(doc, "element")
+        self.alice.sees_an_element(doc, "div", "element_css_class")
+        """
+        selector = "any"
+        if id:
+            displayed_element=doc.find(id=id)
+            selector = id
+        else:
+            if css_class:
+                displayed_element=doc.find(element, css_class)
+                selector = "%s.%s" % (element, css_class)
+            else:
+                displayed_element=doc.find(element)
+                selector = element
+        self.failUnless(displayed_element, "Could not find %s" % selector)
+        return displayed_element
+
+    def sees_a_link(self, doc, href, src=None):
+        """Tests for the presence of a link, and optionally tests for the presence of the link's image 
+        
+        self.alice.sees_a_link(doc, "/page/")
+        self.alice.sees_a_link(doc, "/page/", src="/media/images/link_image.png")
+        """
+        # look for a link in the doc with the expected href
+        link = doc.find(href=href)
+        self.failUnless(link, "Could not find link to %s in:\n%s" % (href, doc))
+
+        # if there is an image being linked, look for the image in the link
+        if src:
+            image = link.find(src=src)
+            self.failUnless(image, "Could not find the image %s" % src)
+        return link
+            
+    def sees_a_string(self, doc, expected_string):
+        """Tests for the presence of a particular string within the doc...
+        
+        self.alice.sees_a_string(doc, "my string")
+        would succeed on the following html snippets:
+        <p>my string</p>
+        <p>this is my string.</p>        
+        <p>here is <a href="/whatever/">my string</a></p>
+        """
+        found = False
+        links = doc.findAll("a")
+        for link in links:
+            if expected_string in link.string:
+                found=True
+                break
+        if not found:
+            if doc.string and expected_string in doc.string:
+                found = True
+        self.failUnless(found, "Could not find %s in:\n%s" % (expected_string, doc))
+        return found
+
     def submits_a_form(self, doc, form_css_id, post_data={}, errors={}, verbose=True, follow_redirects=True, input_type="submit"):
         """ Simulate submitting a form with a POST using the test client
 
@@ -71,13 +129,11 @@ class Actor(TestCase):
         
         form = self.sees_a_form(doc, form_css_id)
         # get all of the fields and put them in a dictionary
-        fields = dict([(f['name'], f) for f in form.findAll("input") + form.findAll("textarea") + form.findAll("select")])
+        fields = dict([(f['name'], f) for f in form.findAll("input") + form.findAll("textarea") + form.findAll("select") if f.has_key('name')])
         for field_name, value in post_data.items():
             # confirm that all of the fields provided exist in the HTML form
             self.failUnless(field_name in fields.keys(), "Field: %s not found in form keys" % field_name)
-
-        self.failUnless(form.find("input", {"type": input_type}), "Could not find a submit button in form: %s" % form)
-
+        self.sees_a_submit_button(form)
         #submit the form
         try:
             response = self.client.post(form['action'], post_data)
@@ -108,15 +164,13 @@ class Actor(TestCase):
 
         return BeautifulSoup(response.content)
 
-    def sees_a_submit_button(self, doc, form_css_id, name=None, input_type="submit"):
+    def sees_a_submit_button(self, form, name=None):
         """ see a submit button as part of a form
         """
-        form = self.sees_a_form(doc, form_css_id)
-        if name:
-            submit_button = form.find("input", {"type": input_type, "name": name})
-        else:
-            submit_button = form.find("input", {"type": input_type})
-        self.failUnless(submit_button, "Submit Button does not exist in %s" % form)
+        submit_buttons = form.findAll(type="image") + form.findAll(type="submit")
+        found = [submit_button for submit_button in submit_buttons if submit_button.get("name", None) == name]
+        self.failUnless(found, "Submit Button does not exist in %s" % form)
+        return found
 
     def sees_a_form(self, doc, form_css_id):
         """ parse a form from a form css id

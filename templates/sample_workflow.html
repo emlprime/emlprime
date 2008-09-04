@@ -1,6 +1,12 @@
-{% extends "base.html" %}
+{% extends "work_section.html" %}
 
 {% block content %}
+
+<div class="page grid_10">
+<a href="/work/"><img src="/media/images/work_page.png" id="work_page" /></a>
+</div>
+
+
 <p id="workflow_explanation">Here is a detailed breakdown of our scrum project workflow.  If you have a great idea, click 'You have a great idea. You present it to us.' to go back to the form on the work page.  From there, you can submit your idea to us, and we can help you make it happen..</p>
 <div id="workflow_cycle">
   <img id="workflow_top_arrow_1" src="/media/images/arrow_top.png" class="workflow_arrow" />
@@ -59,4 +65,9 @@
   </div>
 
 </div>
+
+<div class="corner grid_2 prefix_7">
+<a href="/work/rates/"><img src="/media/images/rates_corner.png" id="rates_corner" /></a>
+</div>
+
 {% endblock %}
