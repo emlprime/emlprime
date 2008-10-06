@@ -14,23 +14,24 @@ class TestStatic(CommonTestCase):
 
         She should...
         """
-        alice = self.alice
-        urls = ["/work/", "/us/", "/play/"]
-        expected_titles = ["work", "us", "play"]
-        expected_titles.sort()
-        # see all three navigation titles on each page
-        for url in urls:
-            doc = self.alice.clicks_a_link(url)
-            links = [("/work/","/media/images/work.png"), ("/us/","/media/images/us.png"), ("/play/", "/media/images/play.png")]
-            navigation = doc.find(id="navigation")
-            displayed_links = navigation.findAll("a")
-            for href, src in links:
-                if href != url:
-                    alice.sees_a_link(navigation, href, src)
-            # see links to all three sections except to the current page
-            current_page_is_linked = False
-            for link in displayed_links:
-                self.failUnless(url not in link["href"], "%s should not be a link on its own page" % url)
+        pass
+        #alice = self.alice
+        #urls = ["/work/", "/us/", "/play/"]
+        #expected_titles = ["work", "us", "play"]
+        #expected_titles.sort()
+        ## see all three navigation titles on each page
+        #for url in urls:
+        #    doc = self.alice.clicks_a_link(url)
+        #    links = [("/work/","/media/images/work.png"), ("/us/","/media/images/us.png"), ("/play/", "/media/images/play.png")]
+        #    navigation = doc.find(id="navigation")
+        #    displayed_links = navigation.findAll("a")
+        #    for href, src in links:
+        #        if href != url:
+        #            alice.sees_a_link(navigation, href, src)
+        #    # see links to all three sections except to the current page
+        #    current_page_is_linked = False
+        #    for link in displayed_links:
+        #        self.failUnless(url not in link["href"], "%s should not be a link on its own page" % url)
         
     def test_home_page(self):
         """ Alice goes to www.emlprime.com
@@ -70,13 +71,6 @@ class TestStatic(CommonTestCase):
         # see the page
         templates_used = ["work.html"]
         doc = alice.clicks_a_link("/work/", templates_used=templates_used)
-        # see the initial conversation, sprint cycle, and approval cycle portions of the project diagram
-        initial_conversation = doc.find(id="initial_conversation")
-        self.failUnless(initial_conversation, "Could not find %s" % initial_conversation)
-        sprint_cycle = doc.find(id="sprint_cycle")
-        self.failUnless(sprint_cycle, "Could not find %s" % sprint_cycle)
-        approval_cycle = doc.find(id="approval_cycle")
-        self.failUnless(approval_cycle, "Could not find %s" % approval_cycle)
         # submit a project request using the form
         self.alice.sees_a_form(doc, "project")
         self.alice.submits_a_form(doc, "project", {'name':'test', 'email':'test@emlprime.com', 'description':'test project'})
