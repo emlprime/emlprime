@@ -5,57 +5,6 @@
 				border: 0;
 }
 
-
-body
-{
-
-		background-image: url("/media/images/background.png");
-
-}
-
-#container
-{
-    background-image: url("/media/images/container_background.png");
-    padding: 30px 0 30px 0;
-    outline: 3px solid black;
-}
-
-#paper
-{
-    background-color: #eeeeee;
-    border: 3px solid black;
-}
-
-#logo
-{
-margin-top: 1em;
-}
-
-/***************
-   tabs
-****************/
-
-.tab
-{
-    height: 500px;
-    border-right: 2px solid black;
-}
-
-.tab.second {
-    height: 400px;
-    padding-top: 100px;
-}
-
-.tab.third {
-    height: 300px;
-    padding-top: 200px;
-}
-
-.tab.fourth {
-    height: 200px;
-    padding-top: 300px;
-}
-
 /***************
    footer and content
 ****************/
@@ -73,19 +22,6 @@ position: relative;
 top: 15px;
 margin: 10px;
 font-weight: bold;
-}
-
-#content
-{
-	background-color: #eeeeee;
-        margin-top: 2em;
-}
-
-#content a
-{
-    color: #a30000;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 #scrum_intro
@@ -322,4 +258,19 @@ margin-right: 60px;
 .projects
 {
 list-style-type: none;
+}
+
+#masthead
+{
+  height: 220px;
+}
+
+#navigation
+{
+  height: 91px;
+}
+
+#comic
+{
+  height: 242px;
 }

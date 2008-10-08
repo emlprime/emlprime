@@ -1,41 +1,64 @@
 {% extends "base.html" %}
 {% load common_tags %}
 
-{% block left_navigation %}
-<div class="grid_1 navigation alpha">
-{% tab "home" "/" "first" %} 
-</div>
-{% endblock %}
-
-{% block right_navigation %}
-<div class="grid_1 navigation">
-{% tab "work" "/work/" "second" %}
-</div>
-<div class="grid_1 navigation">
-{% tab "us" "/us/" "third" %} 
-</div>
-<div class="grid_1 navigation omega">
-{% tab "play" "/play/" "fourth" %} 
-</div>
-{% endblock %}
 
 
 {% block content %}
-<div id="index">
-  <div id="mission_statement">
-    <p>These days, having your own website is like having a phone: everyone needs one.  We delight in helping you create a custom website with all the features you need at a price you can afford.</p>
+<div id="masthead" class="grid_12">
+  <a href="/"><img src="/media/images/masthead.gif" alt=" "/></a>
+</div>
+
+<div class="clear">&nbsp;</div>
+
+<div id="navigation" class="grid_12">
+  <div class="grid_4 alpha">
+    <img src="/media/images/nav_left.gif" alt=" "/>
   </div>
-  <div id="snippets">
-    <div class="work">
-      <p>We use <a href="/work/">scrum project management</a>. That means you are an essential part of the creative process.  It also means that you are guaranteed a working website at the end of each development cycle, at exactly the price quoted before the work began.</p>
-    </div>
-    <div class="us">
-      <p><a href="/us/">We</a> have two decades of combined experience in building websites.  Every site is hand-coded and thoroughly tested.  You can count on getting exactly the look you want.  We enjoy grafting each new client's story into the final product.</p>
-    </div>
-    <div class="play">
-      <p>While we're working hard to get your website up and running, you can relax and enjoy this <a href="/play/">fun game</a>.</p>
-    </div>
+  
+  <div class="grid_1">
+    <a href="/"><img src="/media/images/home.gif" alt=" "/></a>
+  </div>
+  
+  <div class="grid_1">
+    <a href="/work/"><img src="/media/images/work.gif" alt=" "/></a>
+  </div>
+  
+  <div class="grid_1">
+    <a href="/us/"><img src="/media/images/us.gif" alt=" "/></a>
+  </div>
+  
+  <div class="grid_1">
+    <a href="/play/"><img src="/media/images/play.gif" alt=" "/></a>
+  </div>
+  
+  <div class="grid_4 omega">
+    <img src="/media/images/nav_right.gif"  alt=" "/>
   </div>
 </div>
+
+<div class="clear">&nbsp;</div>
+
+<div id="comic" class="grid_12">
+
+  <div class="grid_2 alpha">
+    <img src="/media/images/bottom_left.gif" alt=" "/>
+  </div>
+
+    <div class="grid_8" id="comic">
+      <a href="/work/"><img src="/media/images/comic_work.gif" alt=" "/></a><a href="/us/"><img src="/media/images/comic_us.gif" alt=" "/></a><a href="/play/"><img src="/media/images/comic_play.gif" alt=" "/></a>
+    </div>
+
+
+  <div class="grid_2 omega">
+    <img src="/media/images/bottom_right.gif" alt=" "/>
+  </div>
+
+</div>
+
+  <div class="grid_12">
+    <img src="/media/images/bottom_middle.gif" alt=" " />
+  </div>
+
+
 {% endblock %}
 
