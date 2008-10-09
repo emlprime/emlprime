@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load common_tags %}
+
+
+
+{% block content %}
+<div id="masthead" class="grid_12">
+  <a href="/"><img src="/media/images/masthead.gif" alt=" "/></a>
+</div>
+
+<div class="clear">&nbsp;</div>
+
+<div id="navigation" class="grid_12">
+  <div class="grid_4 alpha">
+    <img src="/media/images/nav_left.gif" alt=" "/>
+  </div>
+  
+  <div class="grid_1">
+    <a href="/"><img src="/media/images/home.gif" alt=" "/></a>
+  </div>
+  
+  <div class="grid_1">
+    <a href="/work/"><img src="/media/images/work.gif" alt=" "/></a>
+  </div>
+  
+  <div class="grid_1">
+    <a href="/us/"><img src="/media/images/us.gif" alt=" "/></a>
+  </div>
+  
+  <div class="grid_1">
+    <a href="/play/"><img src="/media/images/play.gif" alt=" "/></a>
+  </div>
+  
+  <div class="grid_4 omega">
+    <img src="/media/images/nav_right.gif"  alt=" "/>
+  </div>
+</div>
+
+<div class="clear">&nbsp;</div>
+
+<div id="comic" class="grid_12">
+
+  <div class="grid_2 alpha">
+    <img src="/media/images/bottom_left.gif" alt=" "/>
+  </div>
+
+    <div class="grid_8" id="comic">
+      <a href="/work/"><img src="/media/images/comic_work.gif" alt=" "/></a><a href="/us/"><img src="/media/images/comic_us.gif" alt=" "/></a><a href="/play/"><img src="/media/images/comic_play.gif" alt=" "/></a>
+    </div>
+
+
+  <div class="grid_2 omega">
+    <img src="/media/images/bottom_right.gif" alt=" "/>
+  </div>
+
+</div>
+
+  <div class="grid_12">
+    <img src="/media/images/bottom_middle.gif" alt=" " />
+  </div>
+
+
+{% endblock %}
+
