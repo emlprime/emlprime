@@ -1,18 +1,40 @@
-{% extends "work_section.html" %}
+{% extends "base.html" %}
 
 {% block content %}
-<p id="scrum_intro">We use the scrum project management system to manage our projects.  To learn about scrum and how it helps us deliver your project on time and on budget, click the <a href="/work/sample_workflow/">'Scrum'</a> link.  To see a list of our rates and services, click the <a href="/work/rates/">'Rates'</a> link.  If you are ready to submit a project idea to us, fill out the form below, and we will review the project and help you begin making the backlog of features you want.</p>
-<div id="project_form_container">
+<div class="grid_12" id="navigation_logo"
+<div class="grid_1 prefix_2 alpha">
+<a href="/"><img src="/media/images/nav_home.gif" alt=" " /></a>
+</div>
+<div class="grid_1">
+<a href="/work/"><img src="/media/images/nav_work.gif" alt=" " /></a>
+</div>
+<div class="grid_1">
+<a href="/us/"><img src="/media/images/nav_us.gif" alt=" " /></a>
+</div>
+<div class="grid_1">
+<a href="/play/"><img src="/media/images/nav_play.gif" alt=" " /></a>
+</div>
+<div class="grid_6 omega">
+<img src="/media/images/logo.gif" alt=" " />
+</div>
+</div>
+<div class="clear">&nbsp;</div>
+
+
+<div class="grid_8 prefix_2">
+<a href="/work/rates/"><img src="/media/images/comic_work_rates.gif" alt=" " /></a><a href="/work/sample_workflow/"><img src="/media/images/comic_work_workflow.gif" alt=" " /></a><img src="/media/images/comic_work_bookd.gif" alt=" " />
+</div>
+<div class="clear">&nbsp;</div>
+
+<div class="grid_8 prefix_2" id="project_form_container">
+<img src="/media/images/comic_project_form.gif" alt=" " />
+
 <form method="post" id="project_form" action="/project/create/">
   {{ form.as_p }}
   <p><input id="project_submit" type="image" src="/media/images/submit.png" alt="submit" class="submit" />  </p>
 </form>
 </div>
 
-<div class="corner grid_2 prefix_7">
-<a href="/work/sample_workflow/"><img src="/media/images/scrum_corner.png" id="scrum_corner" /></a>
-</div>
-<div class="corner grid_2 prefix_7">
-<a href="/work/rates/"><img src="/media/images/rates_corner.png" id="rates_corner" /></a>
-</div>
+<div class="clear">&nbsp;</div>
+
 {% endblock %}
