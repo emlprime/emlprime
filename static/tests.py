@@ -43,19 +43,6 @@ class TestStatic(CommonTestCase):
         templates_used = ["index.html", "base.html"]
         doc = alice.clicks_a_link("/", templates_used=templates_used)
 
-        # see the page with the logo
-        logo = doc.find(id="logo")
-        self.failUnlessEqual(logo.find('img')["alt"], "EMLPrime")
-        logo_image = doc.find(id="logo").find(src="/media/images/logo.png")
-        self.failUnless(logo_image, "Could not find %s" % logo.png)
-
-        # see the mission statement and work, us, and play snippets
-        mission_statement = doc.find(id="mission_statement")
-        self.failUnless(mission_statement, "Could not find %s" % mission_statement)
-        snippets = ["work","us","play"]
-        for snippet in snippets:
-            self.alice.sees_an_element(doc, "div", snippet)
-
         # see the footer with email and phone from settings and the current year copyright
         footer = doc.find(id="footer")
         for key, value in settings.FOOTER_DATA.items():
@@ -114,10 +101,10 @@ class TestStatic(CommonTestCase):
         # see the page
         templates_used = ["us.html"]
         doc = alice.clicks_a_link("/us/", templates_used=templates_used)
-        # see the initial conversation, sprint cycle, and approval cycle portions of the project diagram
-        elements = ["mug_shot", "personal_info", "experience", "personality", "hobbies"]
-        # see the name, email, and favorite bribe in the personal info section
-        elements += ["name", "contact_email",  "favorite_bribe", "languages", "skills", "finished_projects"]
+        # see peter, laura, and alice
+        elements = ["peter", "laura", "alice"]
+        # see __str__, img, type, dir, doc, and __dict__ in each person's section
+        elements += ["__str__", "img",  "type", "dir", "doc", ".__dict__"]
         for element in elements:
             alice.sees_an_element(doc, id=element)
 
@@ -130,6 +117,36 @@ class TestStatic(CommonTestCase):
         # see the play page displayed
         templates_used = ["play.html"]
         doc = alice.clicks_a_link("/play/", templates_used=templates_used)
+
+    def test_blog(self):
+        """ Alice goes to the play page and selects the blog link
+
+        she should...
+        """
+        alice = self.alice
+        # see the play page displayed
+        templates_used = ["blog.html"]
+        doc = alice.clicks_a_link("/play/blog/", templates_used=templates_used)
+
+    def test_play_page(self):
+        """ Alice goes to the play page and selects the comic link
+
+        she should...
+        """
+        alice = self.alice
+        # see the play page displayed
+        templates_used = ["comic.html"]
+        doc = alice.clicks_a_link("/play/comic/", templates_used=templates_used)
+
+    def test_game_page(self):
+        """Alice goes to the play page and selects the game link
+        
+        she should...
+        """
+        alice = self.alice
+        #see the page
+        templates_used = ["game.html"]
+        doc = alice.clicks_a_link("/play/game/", templates_used=templates_used)
         # see the game background and the four colors
         elements = ["game", "green", "red", "blue", "yellow"]
         for element in elements:

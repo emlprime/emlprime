@@ -38,7 +38,7 @@ def confirmation(request):
     return locals()
 
 @ajax_or_http_response
-def play(request):
+def game(request):
     """ Provides a sequence of 50 colors for the game
     """
     template = "play.html"    
@@ -72,4 +72,25 @@ def rates(request):
     """ Displays our rates and services
     """
     template = "rates.html"
+    return locals()
+
+@ajax_or_http_response
+def comic(request):
+    """ Displays the comic
+    """
+    template = "comic.html"
+    return locals()
+
+@ajax_or_http_response
+def blog(request):
+    """ Displays the blog
+    """
+    template = "blog.html"
+    return locals()
+
+@ajax_or_http_response
+def play(request):
+    """ Displays the play page
+    """
+    template = "play.html"
     return locals()
