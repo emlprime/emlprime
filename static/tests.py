@@ -103,10 +103,17 @@ class TestStatic(CommonTestCase):
         doc = alice.clicks_a_link("/us/", templates_used=templates_used)
         # see peter, laura, and alice
         elements = ["peter", "laura", "alice"]
+        #click on peter, laura, and alice's .__dict__ links to see their description pages
+        for element in elements:
+            doc=alice.clicks_a_link("/us/%s/" % element)
+            alice.sees_an_element(doc, id="portfolio")
+            doc=alice.clicks_a_link("/us/")
         # see __str__, img, type, dir, doc, and __dict__ in each person's section
         elements += ["__str__", "img",  "type", "dir", "doc", ".__dict__"]
         for element in elements:
             alice.sees_an_element(doc, id=element)
+        
+
 
     def test_play_page(self):
         """ Alice goes to www.emlprime.com and clicks the link to the play page

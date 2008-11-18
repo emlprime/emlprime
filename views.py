@@ -61,6 +61,27 @@ def us(request):
     return locals()
 
 @ajax_or_http_response
+def peter(request):
+    """ Display info about peter
+    """
+    template = "peter.html"
+    return locals()
+
+@ajax_or_http_response
+def laura(request):
+    """ Display info about laura
+    """
+    template = "laura.html"
+    return locals()
+
+@ajax_or_http_response
+def alice(request):
+    """ Display info about Alice
+    """
+    template = "alice.html"
+    return locals()
+
+@ajax_or_http_response
 def sample_workflow(request):
     """ Display a sample workflow
     """
