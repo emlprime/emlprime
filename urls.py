@@ -5,6 +5,8 @@ from emlprime.settings import MEDIA_ROOT
 from emlprime.static.models import Project, Blog, Comic
 
 
+admin.autodiscover()
+
 urlpatterns = patterns('django.views.generic.simple',
     (r'^$', 'direct_to_template', {'template': 'index.html'}),
     (r'^new_layout/$', 'direct_to_template', {'template': 'index_960.html'}),
