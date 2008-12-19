@@ -20,4 +20,22 @@
      </div>
 </div>
 
+{% for blog in object_list %}
+<div id="blog">
+<p>{{blog.date}}<h2>{{ blog.title }}</h2></p>
+
+{% if blog.image_1 %}
+<p><img alt=" " src="/media/{{blog.image_1}}" /></p>
+{% endif %}
+
+{% if blog.image_2 %}
+<p><img alt=" " src="/media/{{blog.image_2}}" /></p>
+{% endif %}
+
+{{blog.entry}}
+
+</div>
+{% endfor %}
+
+
 {% endblock %}

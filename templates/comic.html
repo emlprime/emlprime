@@ -20,4 +20,13 @@
      </div>
 </div>
 
+{% for comic in object_list %}
+
+<div id="comic">
+<h2>{{ comic.title }}</h2>
+{{ comic.comic }}
+</div>
+
+{% endfor %}
+
 {% endblock %}
