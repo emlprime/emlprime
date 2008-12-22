@@ -1,9 +1,46 @@
 from emlprime.common.tests import CommonTestCase
-from emlprime.static.models import Project
+from emlprime.static.models import Project, Blog, Comic
+
+from datetime import date
 
 from django.core import mail, management
 from django.conf import settings
 from django.utils import simplejson
+
+class TestCreation(CommonTestCase):
+
+    def setUp(self):
+        CommonTestCase.setUp(self)
+
+    def test_projectCreation(self):
+        """ Tests the creation of a project object
+        """
+        project = Project()
+        self.failUnless(AssertionError)
+        project = Project(name="test", description="test_description", email="email@host.com")
+        self.failUnlessEqual(project.name, "test")
+        self.failUnlessEqual(project.description, "test_description")
+        self.failUnlessEqual(project.email, "email@host.com")
+
+    def test_blogCreation(self):
+        """ Tests the creation of a blog object
+        """
+        blog = Blog()
+        self.failUnless(AssertionError)
+        blog = Blog(title="test", entry="test_entry", date=date(2008, 12, 17))
+        self.failUnlessEqual(blog.title, "test")
+        self.failUnlessEqual(blog.entry, "test_entry")
+        self.failUnlessEqual(blog.date, date(2008, 12, 17))
+
+    def test_comicCreation(self):
+        """ Tests the creation of a comic object
+        """
+        comic = Comic()
+        self.failUnless(AssertionError)
+        comic = Comic(title="test", comic="test_comic.gif", date=date(2008, 12, 17))
+        self.failUnlessEqual(comic.title, "test")
+        self.failUnlessEqual(comic.comic, "test_comic.gif")
+        self.failUnlessEqual(comic.date, date(2008, 12, 17))
 
 class TestStatic(CommonTestCase):
     def setUp(self):
@@ -14,24 +51,12 @@ class TestStatic(CommonTestCase):
 
         She should...
         """
-        pass
-        #alice = self.alice
-        #urls = ["/work/", "/us/", "/play/"]
-        #expected_titles = ["work", "us", "play"]
-        #expected_titles.sort()
-        ## see all three navigation titles on each page
-        #for url in urls:
-        #    doc = self.alice.clicks_a_link(url)
-        #    links = [("/work/","/media/images/work.png"), ("/us/","/media/images/us.png"), ("/play/", "/media/images/play.png")]
-        #    navigation = doc.find(id="navigation")
-        #    displayed_links = navigation.findAll("a")
-        #    for href, src in links:
-        #        if href != url:
-        #            alice.sees_a_link(navigation, href, src)
-        #    # see links to all three sections except to the current page
-        #    current_page_is_linked = False
-        #    for link in displayed_links:
-        #        self.failUnless(url not in link["href"], "%s should not be a link on its own page" % url)
+        alice = self.alice
+        urls = ["/work/", "/us/", "/play/", "/", "/us/peter/", "/us/laura/", "/us/alice/", "/work/rates/", "/work/sample_workflow/"]
+        # see all three navigation titles on each page
+        for url in urls:
+            self.alice.clicks_a_link(url)
+
         
     def test_home_page(self):
         """ Alice goes to www.emlprime.com
