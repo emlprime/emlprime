@@ -274,3 +274,26 @@ list-style-type: none;
 {
   height: 242px;
 }
+
+
+#project_form #id_name {
+position: absolute;
+top: -145px;
+left: 285px;
+width: 50px;
+}
+
+#project_form #id_email {
+position: absolute;
+top: -100px;
+left: 465px;
+width: 120px;
+}
+
+#project_form #id_description {
+position: absolute;
+top: -195px;
+left: 465px;
+width: 120px;
+height: 35px;
+}
