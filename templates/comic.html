@@ -20,13 +20,10 @@
      </div>
 </div>
 
-{% for comic in object_list %}
-
 <div id="comic">
-<h2>{{ comic.title }}</h2>
-{{ comic.comic }}
+<h2>{{ object.title }}</h2>
+<img src="/media/{{ object.comic }}" id="comic_{{ object.id }}" alt="{{ object.title }}" />
 </div>
 
-{% endfor %}
 
 {% endblock %}

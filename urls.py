@@ -17,8 +17,10 @@ urlpatterns += patterns('',
     (r'^admin/(.*)$', admin.site.root),
  )
 
+latest_comic_id = Comic.objects.latest().id if Comic.objects.count() else 1
 urlpatterns += patterns('django.views.generic.list_detail',
-    (r'^play/comic/$', 'object_list',{'queryset': Comic.objects.all(), 'template_name': 'comic.html'}),
+    (r'^play/comic/(?P<object_id>\d+)/$', 'object_detail',{'queryset': Comic.objects.all(), 'template_name': 'comic.html'}),
+    (r'^play/comic/$', 'object_detail',{'queryset': Comic.objects.all(), 'template_name': 'comic.html', 'object_id': latest_comic_id}),
     (r'^play/blog/$', 'object_list',{'queryset': Blog.objects.all(), 'template_name': 'blog.html'}),
 )
 
