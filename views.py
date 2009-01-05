@@ -1,9 +1,10 @@
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.mail import mail_admins
 from django.utils import simplejson
+from django.core.paginator import Paginator
 from random import choice
 
-from emlprime.static.models import Project
+from emlprime.static.models import Project, Comic
 from emlprime.static.forms import ProjectForm
 from emlprime.common.decorators import ajax_or_http_response
 
@@ -100,4 +101,19 @@ def play(request):
     """ Displays the play page
     """
     template = "play.html"
+    return locals()
+
+@ajax_or_http_response
+def comic(request, comic_id=None):
+    """ Displays the comic
+    """
+    template = "comic.html"
+    comics = Comic.objects.all()
+    if not comic_id:
+        if comics.count():
+            comic_id = comics.latest().id
+    if comics.count():
+        paginator = Paginator(Comic.objects.all(), 1)
+        page = paginator.page(comic_id)
+        comic = comics.get(id=comic_id)
     return locals()

@@ -19,8 +19,6 @@ urlpatterns += patterns('',
 
 latest_comic_id = Comic.objects.latest().id if Comic.objects.count() else 1
 urlpatterns += patterns('django.views.generic.list_detail',
-    (r'^play/comic/(?P<object_id>\d+)/$', 'object_detail',{'queryset': Comic.objects.all(), 'template_name': 'comic.html'}),
-    (r'^play/comic/$', 'object_detail',{'queryset': Comic.objects.all(), 'template_name': 'comic.html', 'object_id': latest_comic_id}),
     (r'^play/blog/$', 'object_list',{'queryset': Blog.objects.all(), 'template_name': 'blog.html'}),
 )
 
@@ -37,4 +35,6 @@ urlpatterns += patterns("emlprime.views",
     (r'^play/get_answer_key/$', 'get_answer_key'),
     (r'^work/sample_workflow/$', 'sample_workflow'),
     (r'^work/rates/$', 'rates'),
+    (r'^play/comic/(?P<comic_id>\d+)/$', 'comic'),
+    (r'^play/comic/$', 'comic'),
 )
