@@ -160,15 +160,40 @@ class TestStatic(CommonTestCase):
         templates_used = ["blog.html"]
         doc = alice.clicks_a_link("/play/blog/", templates_used=templates_used)
 
-    def test_play_page(self):
+    def test_comic_page(self):
         """ Alice goes to the play page and selects the comic link
 
         she should...
         """
         alice = self.alice
+
+        for i in range(5):
+            Comic.objects.create(title="Comic %d" % (i + 1), date=date(2008, 1, i + 1))
+
+        first_comic = Comic.objects.get(title="Comic 1")
+        previous_comic = Comic.objects.get(title="Comic 2")
+        current_comic = Comic.objects.get(title="Comic 3")
+        next_comic = Comic.objects.get(title="Comic 4")
+        latest_comic = Comic.objects.get(title="Comic 5")
+
         # see the play page displayed
         templates_used = ["comic.html"]
+
         doc = alice.clicks_a_link("/play/comic/", templates_used=templates_used)
+        alice.sees_an_element(doc, element="img", id="comic_%d" % latest_comic.id)
+
+        doc = alice.clicks_a_link("/play/comic/%s/" % current_comic.id, templates_used=templates_used)
+        alice.sees_an_element(doc, element="img", id="comic_%d" % current_comic.id)
+        
+        # sees a link to the first comic
+        alice.sees_a_link(doc, href="/play/comic/%s/" % first_comic.id)
+
+        # previous and next
+        alice.sees_a_link(doc, href="/play/comic/%s/" % previous_comic.id)
+        alice.sees_a_link(doc, href="/play/comic/%s/" % next_comic.id)
+
+        # sees a link to the latest comic
+        alice.sees_a_link(doc, href="/play/comic/%s/" % latest_comic.id)
 
     def test_game_page(self):
         """Alice goes to the play page and selects the game link

@@ -20,13 +20,22 @@
      </div>
 </div>
 
-{% for comic in object_list %}
-
 <div class="grid_8 prefix_4" id="comic">
+
 <h2>{{ comic.title }}</h2>
-{{ comic.comic }}
+<img src="/media/{{ comic.comic }}" id="comic_{{ comic.id }}" alt="{{ comic.title }}" />
+
+{% if page.has_previous %}
+<a href="/play/comic/1/">|&lt;</a>
+<a href="/play/comic/{{ page.previous_page_number }}/">&lt;</a>
+{% endif %}
+
+{% if page.has_next %}
+<a href="/play/comic/{{ page.next_page_number }}/">&gt;</a>
+<a href="/play/comic/{{ paginator.num_pages }}/">&gt;|</a>
+{% endif %}
+
 </div>
 
-{% endfor %}
 
 {% endblock %}

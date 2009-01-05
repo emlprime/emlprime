@@ -1,4 +1,5 @@
 from django.db import models
+from django.template.defaultfilters import slugify
 
 class Project(models.Model):
     """ Model for the project requests submitted on the work page
@@ -27,9 +28,13 @@ class Comic(models.Model):
     """Model for the comics  that will be displayed on the comic page of the play section
     """
     title = models.CharField(max_length = 255)
-    comic = models.ImageField(upload_to="images")
+    comic = models.ImageField(upload_to="images/comics")
     date = models.DateField()
+
+    class Meta:
+        get_latest_by = "date"
 
     def __unicode__(self):
         return str(self.date)
+
 
