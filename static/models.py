@@ -28,7 +28,7 @@ class Comic(models.Model):
     """Model for the comics  that will be displayed on the comic page of the play section
     """
     title = models.CharField(max_length = 255)
-    comic = models.ImageField(upload_to="images")
+    comic = models.ImageField(upload_to="images/comics")
     date = models.DateField()
 
     class Meta:
