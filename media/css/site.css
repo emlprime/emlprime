@@ -5,7 +5,17 @@
 				border: 0;
 }
 
+#blog
+{
+margin: 1em;
+border-top: 1px solid black;
+border-bottom: 1px solid black;
+}
 
+#blog h2
+{
+font-size: 1.4em;
+}
 
 #comic a
 {
