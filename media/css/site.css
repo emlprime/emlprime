@@ -5,6 +5,20 @@
 				border: 0;
 }
 
+
+
+#comic a
+{
+font-size: 2em;
+margin: 1em;
+color: black;
+}
+
+#comic
+{
+margin-bottom: 1em;
+}
+
 /***************
    footer and content
 ****************/
