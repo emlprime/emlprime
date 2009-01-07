@@ -19,7 +19,7 @@
        <img src="/media/images/logo.gif" alt=" " />
      </div>
 </div>
-
+<div id="blog_container" class="grid_8 prefix_2">
 {% for blog in object_list %}
 <div id="blog">
 <p>{{blog.date}}<h2>{{ blog.title }}</h2></p>
@@ -36,6 +36,6 @@
 
 </div>
 {% endfor %}
-
+</div>
 
 {% endblock %}
