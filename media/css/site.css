@@ -299,6 +299,10 @@ list-style-type: none;
   height: 700px;
 }
 
+#home_page_comic
+{
+height: 242px;
+}
 
 #project_form #id_name {
 position: absolute;
