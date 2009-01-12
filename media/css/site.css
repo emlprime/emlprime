@@ -26,7 +26,23 @@ color: black;
 
 #comic
 {
-margin-bottom: 1em;
+  margin-bottom: 1em;
+  height: 730px;
+  position: relative;
+}
+
+#right_arrows
+{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+#left_arrows
+{
+  position: absolute;
+  left: 180px;
+  bottom: 10px;
 }
 
 /***************
@@ -292,11 +308,6 @@ list-style-type: none;
 #navigation
 {
   height: 91px;
-}
-
-#comic
-{
-  height: 700px;
 }
 
 #home_page_comic
