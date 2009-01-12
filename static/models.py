@@ -21,6 +21,9 @@ class Blog(models.Model):
     image_1 = models.ImageField(upload_to="images", null=True, blank=True)
     image_2 = models.ImageField(upload_to="images", null=True, blank=True)
 
+    class Meta:
+        ordering = ['-date']
+
     def __unicode__(self):
         return str(self.date)
 
