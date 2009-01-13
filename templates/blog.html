@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load markup %}
+
 {% block content %}
 
 <div class="grid_12" id="navigation_logo"
@@ -32,7 +34,7 @@
 <p><img alt=" " src="/media/{{blog.image_2}}" /></p>
 {% endif %}
 
-{{blog.entry}}
+{{blog.entry|markup}}
 
 </div>
 {% endfor %}
