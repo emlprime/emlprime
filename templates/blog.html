@@ -36,6 +36,9 @@
 
 </div>
 {% endfor %}
+
+<p>{% for page in page_range %}<a href="/play/blog/?page={{page}}">{{page}}</a>{% endfor %}</p>
+
 </div>
 
 {% endblock %}
