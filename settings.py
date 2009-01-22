@@ -1,6 +1,6 @@
 # Django settings for EMLPrime project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -96,8 +96,10 @@ INSTALLED_APPS = (
     'emlprime.static',
 )
 
+#current admin data
 FOOTER_DATA = {
     'email' : 'info@emlprime.com',
     'phone_number' : '805.448.2304',
-    'copyright' : 'Copyright 2008 EMLPrime',
+    'copyright' : 'Copyright 2009 EMLPrime',
 }
+
