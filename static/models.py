@@ -1,6 +1,24 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 
+
+
+OWNER_CHOICES = (
+    ('P', 'Peter')
+    ('L', 'Laura')
+)
+
+class Portfolio(models.Model):
+    """ Model for the portfolio objects listed on the peter and laura profile pages
+    """
+    
+    owner = models.CharField(choices=OWNER_CHOICES)
+    url = models.CharField(max_length=255)
+    image = models.ImageField(upload_to="images", null=True, blank=True)
+
+    def __unicode__(self):
+        return self.url()
+
 class Project(models.Model):
     """ Model for the project requests submitted on the work page
     """
