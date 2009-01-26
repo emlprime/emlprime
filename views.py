@@ -65,7 +65,7 @@ def us(request):
 def peter(request):
     """ Display info about peter
     """
-    portfolio = Portfolio.objects.filter(owner="peter")
+    portfolio = Portfolio.objects.filter(owner="P")
     template = "peter.html"
     return locals()
 
@@ -73,8 +73,10 @@ def peter(request):
 def laura(request):
     """ Display info about laura
     """
-    portfolio = Portfolio.objects.filter(owner="laura")
+    portfolio = Portfolio.objects.filter(owner="L")
     template = "laura.html"
+    print Portfolio.objects.count()
+    print portfolio.count()
     return locals()
 
 @ajax_or_http_response
