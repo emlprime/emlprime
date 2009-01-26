@@ -29,7 +29,7 @@
   <h2>Laura's Website Portfolio</h2>
   <ul id="laura_portfolio">
     {% for object in portfolio %}
-    <li><a href={{object.url}}>{{object.image}}{{object.name}}</a></li>
+    <li><a href={{object.url}}><img alt=" " src="/media/{{object.image}}" /><h2>{{object.name}}</h2></a></li>
     {% endfor %}
   </ul>
 <a href="/us/">Back</a>
