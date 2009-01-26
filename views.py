@@ -4,7 +4,7 @@ from django.utils import simplejson
 from django.core.paginator import Paginator
 from random import choice
 
-from emlprime.static.models import Project, Comic
+from emlprime.static.models import Project, Comic, Portfolio
 from emlprime.static.forms import ProjectForm
 from emlprime.common.decorators import ajax_or_http_response
 

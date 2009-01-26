@@ -4,7 +4,7 @@ from django.template.defaultfilters import slugify
 
 
 OWNER_CHOICES = (
-    ('P', 'Peter')
+    ('P', 'Peter'),
     ('L', 'Laura')
 )
 
@@ -12,7 +12,7 @@ class Portfolio(models.Model):
     """ Model for the portfolio objects listed on the peter and laura profile pages
     """
     
-    owner = models.CharField(choices=OWNER_CHOICES)
+    owner = models.CharField(choices=OWNER_CHOICES, max_length=5)
     name = models.CharField(max_length=255)
     url = models.CharField(max_length=255)
     image = models.ImageField(upload_to="images", null=True, blank=True)
