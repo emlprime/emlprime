@@ -18,7 +18,7 @@ class Portfolio(models.Model):
     image = models.ImageField(upload_to="images", null=True, blank=True)
 
     def __unicode__(self):
-        return self.url()
+        return self.url
 
 class Project(models.Model):
     """ Model for the project requests submitted on the work page
@@ -29,7 +29,7 @@ class Project(models.Model):
     description = models.TextField()
 
     def __unicode__(self):
-        return self.name()
+        return self.name
 
 class Blog(models.Model):
     """Model for the blog entry that will be displayed on the blog page of the play section
