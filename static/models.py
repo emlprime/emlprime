@@ -13,6 +13,7 @@ class Portfolio(models.Model):
     """
     
     owner = models.CharField(choices=OWNER_CHOICES)
+    name = models.CharField(max_length=255)
     url = models.CharField(max_length=255)
     image = models.ImageField(upload_to="images", null=True, blank=True)
 

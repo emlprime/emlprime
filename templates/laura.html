@@ -28,8 +28,9 @@
 <div id="portfolio" class="grid_4">
   <h2>Laura's Website Portfolio</h2>
   <ul id="laura_portfolio">
-	<li><a href="http://www.emlprime.com">EMLPrime</a></li>
-	<li><a href="http://www.freetruthordare.com">Free Truth or Dare</a></li>
+    {% for object in portfolio %}
+    <li><a href={{object.url}}>{{object.image}}{{object.name}}</a></li>
+    {% endfor %}
   </ul>
 <a href="/us/">Back</a>
 </div>

@@ -65,6 +65,7 @@ def us(request):
 def peter(request):
     """ Display info about peter
     """
+    portfolio = Portfolio.objects.filter(owner="peter")
     template = "peter.html"
     return locals()
 
@@ -72,6 +73,7 @@ def peter(request):
 def laura(request):
     """ Display info about laura
     """
+    portfolio = Portfolio.objects.filter(owner="laura")
     template = "laura.html"
     return locals()
 

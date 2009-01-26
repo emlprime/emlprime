@@ -28,9 +28,9 @@
 <div id="portfolio" class="grid_4">
   <h2>Peter's Website Portfolio</h2>
   <ul id="peter_portfolio">
-	<li><a href="http://www.healingcirclemassage.com/">Healing Circle Massage</a></li>
-	<li><a href="http://www.healingcirclenaturalhealth.com/">Healing Circle Natural Health</a></li>
-	<li><a href="http://www.aimeewilder.com/">Aimee Wilder</a></li>
+    {% for object in portfolio %}
+    <li><a href={{object.url}}>{{object.image}}{{object.name}}</a></li>
+    {% endfor %}
   </ul>
 <a href="/us/">Back</a>
 </div>
