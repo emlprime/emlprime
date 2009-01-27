@@ -75,8 +75,6 @@ def laura(request):
     """
     portfolio = Portfolio.objects.filter(owner="L")
     template = "laura.html"
-    print Portfolio.objects.count()
-    print portfolio.count()
     return locals()
 
 @ajax_or_http_response

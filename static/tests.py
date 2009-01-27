@@ -100,22 +100,6 @@ class TestStatic(CommonTestCase):
         # see the page
         templates_used = ["sample_workflow.html"]
         doc = alice.clicks_a_link("/work/sample_workflow/", templates_used=templates_used)
-        # see the divs for the initial stage, sprint cycle, and approval cycle
-        elements = ["workflow_initial_stage", "workflow_sprint_cycle", "workflow_approval_cycle"]
-        # see the great idea, transformation, and initial sprint divs inside the initial stage
-        elements += ["great_idea", "transformation", "initial_sprint"]
-
-        # see the assign sprint, write tests, write code, update burndown, and present stories inside the sprint cycle
-        elements += ["assign_sprint_tasks", "write_tests","write_code","update_burndown", "present_stories"]
-
-        # see the story approval, get paid, add ideas, groom backlog, and design next sprint inside the approval cycle
-        elements += ["story_approval", "get_paid", "design_next_sprint"]
-
-        for element in elements:
-            alice.sees_an_element(doc, id=element)
-        # see a link on the great idea div that links back to the work page
-        link = doc.find(id="workflow_initial_stage").find(href="/work/")
-        self.failUnless(link, "could not find link from workflow back to project form")
 
     def test_us_page(self):
         """ Alice goes to www.emlprime.com and follows the link to the us page
