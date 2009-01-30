@@ -42,6 +42,8 @@ class TestCreation(CommonTestCase):
         self.failUnlessEqual(comic.comic, "test_comic.gif")
         self.failUnlessEqual(comic.date, date(2008, 12, 17))
 
+
+
 class TestStatic(CommonTestCase):
     def setUp(self):
         CommonTestCase.setUp(self)
@@ -52,11 +54,15 @@ class TestStatic(CommonTestCase):
         She should...
         """
         alice = self.alice
-        urls = ["/work/", "/us/", "/play/", "/", "/us/peter/", "/us/laura/", "/us/alice/", "/work/rates/", "/work/sample_workflow/"]
+        urls = ["/work/", "/us/", "/play/", "/us/peter/", "/us/laura/", "/us/alice/", "/work/rates/", "/work/sample_workflow/", "/play/comic/", "/play/blog/", "/play/game/", "/work/create/"]
         # see all three navigation titles on each page
         for url in urls:
-            self.alice.clicks_a_link(url)
-
+            doc=alice.clicks_a_link(url)
+            alice.sees_an_element(doc, id="navigation_logo")
+            alice.sees_a_link(doc, "/")
+            alice.sees_a_link(doc, "/work/")
+            alice.sees_a_link(doc, "/us/")
+            alice.sees_a_link(doc, "/play/")
         
     def test_home_page(self):
         """ Alice goes to www.emlprime.com

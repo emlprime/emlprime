@@ -26,6 +26,31 @@
   </head>
   <body>
     <div class="container_12">
+
+      {% block navigation %}
+
+      <div class="grid_12" id="navigation_logo">
+	<div class="grid_1 prefix_2 alpha">
+	  <a href="/"><img src="/media/images/nav_home.gif" alt=" " /></a>
+	</div>
+	<div class="grid_1">
+	  <a href="/work/"><img src="/media/images/nav_work.gif" alt=" " /></a>
+	</div>
+	<div class="grid_1">
+	  <a href="/us/"><img src="/media/images/nav_us.gif" alt=" " /></a>
+	</div>
+	<div class="grid_1">
+	  <a href="/play/"><img src="/media/images/nav_play.gif" alt=" " /></a>
+	</div>
+	<div class="grid_6 omega">
+	  <img src="/media/images/logo.gif" alt=" " />
+	</div>
+      </div>
+
+      <div class="clear">&nbsp;</div>
+
+      {% endblock %}
+
       
 	  <div id="content" class="grid_12">
 	    {% block content %} BLOCK CONTENT {% endblock %}
