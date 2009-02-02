@@ -51,7 +51,6 @@ class Comic(models.Model):
     """
     title = models.CharField(max_length = 255)
     comic = models.ImageField(upload_to="images/comics")
-    description = models.TextField(null=True, blank=True)
     date = models.DateField()
 
     class Meta:
