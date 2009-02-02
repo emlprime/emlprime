@@ -2,7 +2,7 @@ from django.conf.urls.defaults import *
 from django.contrib import admin
 
 from emlprime.settings import MEDIA_ROOT
-from emlprime.static.models import Project, Blog, Comic
+from emlprime.static.models import Project, Blog, Comic, BlogFeed, ComicFeed
 
 
 admin.autodiscover()
@@ -12,10 +12,16 @@ urlpatterns = patterns('django.views.generic.simple',
     (r'^new_layout/$', 'direct_to_template', {'template': 'index_960.html'}),
 )
 
+feeds = {
+    'blog' : BlogFeed,
+    'comic' : ComicFeed,
+}
+
 urlpatterns += patterns('',
     (r'^media/(.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
     (r'^admin/(.*)$', admin.site.root),
- )
+    (r'^feeds/(?P<url>.*)$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),                        
+)
 
 latest_comic_id = Comic.objects.latest().id if Comic.objects.count() else 1
 urlpatterns += patterns('django.views.generic.list_detail',

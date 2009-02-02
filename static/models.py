@@ -1,6 +1,6 @@
 from django.db import models
 from django.template.defaultfilters import slugify
-
+from django.contrib.syndication.feeds import Feed
 
 
 OWNER_CHOICES = (
@@ -60,3 +60,44 @@ class Comic(models.Model):
         return str(self.date)
 
 
+class BlogFeed(Feed):
+    """ Model for submitting the latest blog entries to the RSS feed
+    """
+
+    title = "EML' Blog"
+    link = "/play/blog/"
+    description = "EML' official blog.  Accept no substitutes."
+    copyright = "Copyright (c) 2009, EMLPrime"
+
+    def author_name(self):
+        return "Peter Stradinger"
+
+    def author_email(self):
+        return "peter@emlprime.com"
+
+    def copyright(self):
+        return copyright
+
+    def items(self):
+        return Blog.objects.order_by('-date')[:10]
+
+class ComicFeed(Feed):
+    """ Model for submitting the latests comics to the RSS feed
+    """
+
+    title = "Boobies!"
+    link = "/play/comic/"
+    description = "A comic by EML'.  We all think these things, but are too embarassed to admit it."
+    copyright = "Copyright (c) 2009, EMLPrime"
+
+    def author_name(self):
+        return "Peter Stradinger"
+
+    def author_email(self):
+        return "peter@emlprime.com"
+
+    def copyright(self):
+        return copyright
+
+    def items(self):
+        return Comic.objects.order_by('-date')[:10]

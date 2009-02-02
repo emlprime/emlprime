@@ -1,5 +1,5 @@
 from emlprime.common.tests import CommonTestCase
-from emlprime.static.models import Project, Blog, Comic
+from emlprime.static.models import Project, Blog, Comic, BlogFeed
 
 from datetime import date
 
@@ -41,7 +41,6 @@ class TestCreation(CommonTestCase):
         self.failUnlessEqual(comic.title, "test")
         self.failUnlessEqual(comic.comic, "test_comic.gif")
         self.failUnlessEqual(comic.date, date(2008, 12, 17))
-
 
 
 class TestStatic(CommonTestCase):
@@ -203,3 +202,4 @@ class TestStatic(CommonTestCase):
         displayed_list = simplejson.loads(response.content)
         self.failUnlessEqual(type(displayed_list), list)
         self.failUnlessEqual(len(displayed_list), 50)
+
