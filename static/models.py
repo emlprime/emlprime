@@ -78,6 +78,9 @@ class BlogFeed(Feed):
     def copyright(self):
         return copyright
 
+    def item_link(self):
+        return "http://www.emlprime.com/play/blog/"
+
     def items(self):
         return Blog.objects.order_by('-date')[:10]
 
@@ -98,6 +101,9 @@ class ComicFeed(Feed):
 
     def copyright(self):
         return copyright
+
+    def item_link(self):
+        return "http://www.emlprime.com/play/comic/"
 
     def items(self):
         return Comic.objects.order_by('-date')[:10]
