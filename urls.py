@@ -20,7 +20,7 @@ feeds = {
 urlpatterns += patterns('',
     (r'^media/(.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
     (r'^admin/(.*)$', admin.site.root),
-    (r'^feeds/(?P<url>.*)$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),                        
+    (r'^feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),                        
 )
 
 latest_comic_id = Comic.objects.latest().id if Comic.objects.count() else 1
