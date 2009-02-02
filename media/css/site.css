@@ -225,3 +225,24 @@ list-style-type: none;
 height: 242px;
 }
 
+
+/***************
+   rates page
+****************/
+
+#invoice
+{
+list-style-type: none;
+font-size: 1.3em;
+}
+
+.price
+{
+outline: 1 px solid black;
+}
+
+#invoice li
+{
+text-align: center;
+margin: 0.5em;
+}
