@@ -1,0 +1,400 @@
+[
+    {
+        "pk": 1, 
+        "model": "static.portfolio", 
+        "fields": {
+            "owner": "P", 
+            "url": "http://www.aimeewilder.com", 
+            "image": "images/aw.png", 
+            "name": "Aimee Wilder"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "static.portfolio", 
+        "fields": {
+            "owner": "P", 
+            "url": "http://www.healingcirclenaturalhealth.com", 
+            "image": "images/hcnh.png", 
+            "name": "Healing Circle Natural Health"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "static.portfolio", 
+        "fields": {
+            "owner": "P", 
+            "url": "http://www.healingcirclemassage.com", 
+            "image": "images/hcm.png", 
+            "name": "Healing Circle Massage"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "static.portfolio", 
+        "fields": {
+            "owner": "L", 
+            "url": "http://www.emlprime.com", 
+            "image": "images/eml.png", 
+            "name": "EML'"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "static.portfolio", 
+        "fields": {
+            "owner": "L", 
+            "url": "http://www.freetruthordare.com", 
+            "image": "images/tod.png", 
+            "name": "Truth or Dare"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "static.portfolio", 
+        "fields": {
+            "owner": "L", 
+            "url": "http://www.healingcirclemassage.com", 
+            "image": "images/hcm_.png", 
+            "name": "Healing Circle Massage"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "static.project", 
+        "fields": {
+            "description": "Blow me.", 
+            "name": "Peter", 
+            "email": "peter@emlprime.com"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "static.project", 
+        "fields": {
+            "description": "here is a project", 
+            "name": "Test", 
+            "email": "test@emlprime.com"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "static.project", 
+        "fields": {
+            "description": "I have a great idea.  I'd love to give you a lot of money to implement it.", 
+            "name": "Peter Stradinger", 
+            "email": "emlprime@gmail.com"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "static.project", 
+        "fields": {
+            "description": "Testing that this emails me.", 
+            "name": "Laura Madsen", 
+            "email": "laura.m.madsen@gmail.com"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "static.project", 
+        "fields": {
+            "description": "Testing to be sure this works.", 
+            "name": "Peter", 
+            "email": "peter@emlprime.com"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "static.project", 
+        "fields": {
+            "description": "testing again", 
+            "name": "laura", 
+            "email": "laura.m.madsen@gmail.com"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "static.project", 
+        "fields": {
+            "description": "iAuqbH  <a href=\"http://pqklvkfsikzr.com/\">pqklvkfsikzr</a>, [url=http://etzsbybvqrah.com/]etzsbybvqrah[/url], [link=http://nvsiszfibavv.com/]nvsiszfibavv[/link], http://scmpdtdewmcx.com/", 
+            "name": "rnotpghx", 
+            "email": "rrwrqi@sujaqw.com"
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-26", 
+            "entry": "There are a number of elements to the prevailing work ethic that disturb me.  There seems to be a significant amount of self-destructive behavior that is, strangely, a grass-roots movement.  What I've seen is that programmers are faced with a paradoxical problem.  Where in the past innovation has generally occurred in fits and starts, over a period of decades, innovation in this generation has become a commodity.  There was a time within the memory of people alive when 'big' news was an occasional event.  Now our desire for novelty is an all-consuming hunger.  \r\n\r\nTo fuel that hunger, we live in an age of start-ups and entrepreneurial ventures that burn developers like so much tinder.  In many places I've worked, the employees are fairly well paid, but the prevailing attitude comes straight out of a Steinbeck novel.  There's an attitude of putting in more hours, working yourself to the bone, and struggling with frustrating problems with no time to enjoy the fruits of your labors.\r\n\r\nTo be clear, I love hard work.  Those who have worked with me know that when I focus on a task, I work with an intensity that is both fierce and productive.  I don't fear complex or time-consuming tasks.  If I have to rip apart hundreds of files and grep all over creation to get the code working, I will.  My concern is not over people working hard.\r\n\r\nMy concern is the short-sightedness of destroying one's mind and body for the short-term gain of an enterprise.  I believe in focused, intense work.  I enjoy high productivity.  What does concern me is the continuous long-hours, caffeine-driven 'powering-through', and eye-rolling hacked-together work that is becoming the standard of my industry.\r\n\r\nIn the Google Talk I watched on scrum (http://video.google.com/videoplay?docid=-7230144396191025011 ) one of the most disturbing points to me was that programmers have learned to lie without remorse.  It's accepted that hacked together code should reach production.  Coder's speak of their un-maintainable tricks and hacks with pride, as if they've won an award by making a piece of functionality work in a way that will cost hours or days of future maintenance.\r\n\r\nSo this rant is all well and good, but what's my solution?  Honestly it's to work harder, and work less.  I've found, in my own experiments, that I can work as little as 6 hours a day and be as productive as an over-stressed, strung-out-on-coffee coder working 10 hours.  I spend a lot less time sitting and staring at the screen.  I make fewer mistakes.  The code I write is easily decipherable several weeks later.  I don't think I'm smarter, or better than my peers.  If anything, they have a greater knowledge and experience.  I just believe that time has both volume and density, and their robbing their employers of value by destroying themselves with exhaustion.\r\n\r\nWhen I rule the world, or at least my own company, I figure about a 18 hour max work week should be about right.  4 days of 2 hour bursts of productivity.  15 minute meetings at the beginning and end of each day.", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "Burnout"
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-23", 
+            "entry": "When I was a kid, I remember watching the Jetsons.  I remember thinking, won't that be interesting, when we have enough automation to supply the world's need for labor, and we can get by with much more efficient workdays.  I wondered if we'd become more philosophical, or perhaps more exploratory.  Much of Star Trek is based on the assumption that once you can deal with world hunger, that society will improve and become more socially just.\r\n\r\nIt works out, that's not the way of human nature.  What ends up happening is that the people with power to make decision generally make them out of self-interest.  That's all well and good, but for some reason innovators keep going on their merry way...innovating.  The funny thing to me is that there's not really a bad guy here.  There are just short-sighted people punishing themselves.\r\n\r\nI talk with a lot of friends and co-workers who are pushing themselves into the ever-expanding funnel of burnout (which I'll explore in a different comic).\r\n\r\nI'm open to the idea that I'm wrong about this, but I find that it's important for me to know what my \"win condition\" is, so that I recognize it when I get there.  In this economy, there's much talk of constant growth.  I'm not sure I like the idea of an economy based on constant growth.  It feels to me like someone thinking they can run across a river on a wire if they can just get going fast enough.  I think I'd rather learn to balance and take my time.  Maybe look around a little.\r\n\r\nI'm not in a hurry to retire.  I want to learn to enjoy where I am right now, and not burn myself out.  So, while I will constantly look for ways to make things more efficient, I generally use the gained time to do something right where I would otherwise be rushed.  Everyone gains from that, even if they don't necessarily know why.\r\n\r\n-Peter\r\n", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "Meet the Jetsons"
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-21", 
+            "entry": "In a lot of areas of my life, I struggle with dichotomy.  On the one hand, I'm a fairly kind person.  I really don't like making other people sad.  I usually try to benefit them in some way.\r\n\r\nOn the other hand, there's a tiny nagging voice in the back of my head that really enjoys seeing the whipcrack of a well delivered insult.  Laura's solution was her way.  My way (and Jenn's) was to try to find people who honestly weren't sensitive about something, and then just really unload.  It's very therapeutic.\r\n\r\nFortunately, despite her constant eating, her metabolism has, so far, stayed ahead of the curve.  I hate to think what would happen if she actually got fat.  The sudden absence of teasing would become deafening.\r\n\r\nOf course, in our often spectacular trade offs, I usually win...cause she has trouble delivering insults between Twinkies (tm). :p\r\n\r\n- Peter", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "Weighty Matters"
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-19", 
+            "entry": "This is more or less a real story.  I've been trying to write this novel since about my freshman year in college.\r\n\r\nIt's a great idea, and very well developed, but I can't seem to get myself past the first 100 pages or so.  The story also keeps changing subtly as I go, so I have to go back and revise the parts that don't make sense.\r\n\r\nThe best revision, though, was when my friend started inking it up.  It turned out that the story was a lot better with her ad-hoc comments.  I guess that doesn't say much for my writing skills.\r\n\r\n- Peter", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "Constructive Criticism"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-16", 
+            "entry": "Insults and witty comebacks have always been a problem for me.  I just spent so much time studying language and irony that patterns naturally occur to me.  Often the connection will be silly or trite, but once it happens, it echos in my head until I say it.  It took me a while to realize that it sometimes hurts people's feelings, which was when I started mumbling a lot.\r\n\r\nSo if you hear me mumbling, often best not to make me repeat it.  It's not you, it was just too good not to be said out loud.\r\n\r\n-Peter", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "Burn!"
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-16", 
+            "entry": "I have this problem.  I have overwhelming urges to finish the line.  It had me perpetually in trouble with all of my friends in junior high, because I'd finish the line, and someone would end up with hurt feelings.  By high school, I was very used to extensively making fun of myself.  That way, I could finish the line, and nobody else would get hurt.\r\n\r\nThen, around college, I decided I didn't care if other peoples' feelings were hurt.  I have fewer friends, but life is a lot funnier...\r\n\r\n-Laura", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "Running Gag II"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-14", 
+            "entry": "So I realized today that the characters' names haven't been mentioned yet.  I usually forget their names anyway.  They're just too cute!  But, fear not, their names will appear soon enough.\r\n\r\nThis also actually happened in real life.\r\n\r\n-Laura", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "Running Gag"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-14", 
+            "entry": "Really nothing impresses a girl like running full-speed into a pole.  In my defense it was dark and misty.  It was also early, and I may have been drowsy.  I was deeply immersed in listening to whatever she was saying.  I contend that I was not staring at the lycra running shorts.\r\n\r\nLaura, thankfully, chose not to illustrate me lying on my back on the street while she laughed at me.  \r\n\r\n-Peter", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "Running Gag"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-12", 
+            "entry": "Peter and I had just about this exact conversation two years ago.  I had him faithfully running four miles each day for several months just because I wore cute running clothes.\r\n\r\nLaura", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "Getting Up Early"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-12", 
+            "entry": "Up until about a couple of years ago, I decided running wasn't for me.  It just didn't seem social enough.  I'd have said I let programs do all my running.  Since that's something I'd probably have actually said...it's amazing to me that women are willing to talk to me.  Ever.\r\n\r\nI discovered that, like most things, I enjoy running, but only in the company of others.  Introverts have it easy.  They can be all happy and fulfilled doing their own thing.  Extroverts actually need to find someone else who's interested in doing what they want to do.  That's fine if one's interests coincide with those of other extroverts...but where do you find someone who wants to play Go and discuss the socio-political implications of Firefly at 7 in the morning?\r\n\r\n-Peter", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "Getting Up Early"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-09", 
+            "entry": "Aqua... part of the fabulous ABC's of music.\r\n\r\nLaura", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "Life in Plastic"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-09", 
+            "entry": "I once worked on a project where I had to stay up late every night for several months on end.  I found that only two things worked for me.  \r\n\r\n1. Really depressing songs that suppressed my desire to do anything but work.  Essentially entering me into a hyperproductive stage of grief.\r\n2. Aqua, Britney, Christina.  Music so rhythmically driven, and so devoid of actual thoughtful content that my body remained awake and motivated while my mind was completely unoccupied. (It's impressive that I managed to use that many words and still come up with a fragment.)\r\n\r\n- Peter", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "Let's go party"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-07", 
+            "entry": "Ah, the cute buffer.  One of my favorites from the treasure trove of Peter's theories on life.  It just makes sense.  Why else would anyone put up with (fill in name of hot possible-celebrity-status individual).\r\n\r\nThe best thing about the cute buffer, by far, isn't the hapless (and mildly annoyed) men putting up with their obnoxiously girly girlfriends.  Though that is funny.  The best thing is that, eventually, the cute buffer can be exhausted.  And when it finally is - especially when it was a big buffer to begin with - and someone finally snaps at the annoying hottie, the look on her face is invariably priceless.\r\n\r\nLaura", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "The Cute Buffer"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-06", 
+            "entry": "This isn't one I'm proud of, per se.  It was mostly something I came up with in a conversation to explain why I seemed more tolerant of inanity in attractive people than in others.  The older I get, the less tolerance I tend to have for the cute buffer.\r\n\r\nJust remember, like all power, the cute buffer can be used for good or evil.  Also, like all power, you should carry special adapters when traveling in other countries.\r\n\r\n- Peter", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "And other theories of stupid"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-05", 
+            "entry": "This is our first blog post, and first comic.  I've had the emlprime.com domain a long time, but never felt I had enough content or design to put anything up.  Then Laura came along and motivated me.  Awesome.\r\n\r\nIn college I came up with a number of wild theories.  Some of them more rigorously tested than others.  I feel that this one is probably the most often confirmed, and possibly the most useful, that came from my college years.\r\n\r\nI like to think that it's not us being rude.  It's just physics.\r\n\r\n- Peter", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "Boobies!"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "static.blog", 
+        "fields": {
+            "date": "2009-01-05", 
+            "entry": "So, first comic.\r\n\r\nThe most notable thing about this comic is that the only point of discussion on the artwork was how the cleavage should look in the fourth frame.  Peter had a very well-developed opinion of exactly how cleavage should look.  I had to defer to his vastly superior cleavage knowledge, as I haven't really thought about it all that much.  Boobies is nice...\r\n\r\nLooking forward to next comic.  I don't know what it's going to be yet (yay for just starting out!)\r\n\r\nLaura", 
+            "image_1": "", 
+            "image_2": "", 
+            "title": "Boobies"
+        }
+    }, 
+    {
+        "pk": 1, 
+        "model": "static.comic", 
+        "fields": {
+            "date": "2009-01-04", 
+            "comic": "images/comics/boobies.jpg", 
+            "title": "Boobies"
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "static.comic", 
+        "fields": {
+            "date": "2009-01-07", 
+            "comic": "images/comics/the_cute_buffer.jpg", 
+            "title": "The Cute Buffer"
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "static.comic", 
+        "fields": {
+            "date": "2009-01-09", 
+            "comic": "images/comics/life_in_plastic.jpg", 
+            "title": "Life in Plastic"
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "static.comic", 
+        "fields": {
+            "date": "2009-01-12", 
+            "comic": "images/comics/getting_up_early.jpg", 
+            "title": "Getting Up Early"
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "static.comic", 
+        "fields": {
+            "date": "2009-01-12", 
+            "comic": "images/comics/getting_up_early_.jpg", 
+            "title": "Getting Up Early"
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "static.comic", 
+        "fields": {
+            "date": "2009-01-14", 
+            "comic": "images/comics/running_gag.jpg", 
+            "title": "Running Gag"
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "static.comic", 
+        "fields": {
+            "date": "2009-01-16", 
+            "comic": "images/comics/running_gag_ii.gif", 
+            "title": "Running Gag II"
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "static.comic", 
+        "fields": {
+            "date": "2009-01-19", 
+            "comic": "images/comics/minutiae.png", 
+            "title": "Minutiae"
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "static.comic", 
+        "fields": {
+            "date": "2009-01-21", 
+            "comic": "images/comics/weighty_matters.png", 
+            "title": "Weighty Matters"
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "static.comic", 
+        "fields": {
+            "date": "2009-01-23", 
+            "comic": "images/comics/meetthejetsons.png", 
+            "title": "Meet the Jetsons"
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "static.comic", 
+        "fields": {
+            "date": "2009-01-26", 
+            "comic": "images/comics/burnout_vector.png", 
+            "title": "It's better to fade away"
+        }
+    }
+]
