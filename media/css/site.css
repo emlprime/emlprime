@@ -165,6 +165,10 @@ height: 35px;
    home, work, and us
 ****************/
 
+.help_text
+{
+margin-top: 2em;
+}
 
 #scrum_intro
 {
