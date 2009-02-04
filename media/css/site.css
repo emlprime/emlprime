@@ -27,14 +27,14 @@ font-weight: bold;
 font-size: 1.1em;
 }
 
-#blog
+.blog
 {
 margin: 5em;
 border-top: 2px solid black;
 border-bottom: 2px solid black;
 }
 
-#blog h2
+.blog h2
 {
 font-size: 1.4em;
 }
