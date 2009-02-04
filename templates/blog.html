@@ -6,8 +6,9 @@
 
 <div id="blog_container" class="grid_8 prefix_2">
 {% for blog in object_list %}
-<div id="blog">
-<p>{{blog.date}}<h2>{{ blog.title }}</h2></p>
+<div class="blog">
+<h2>{{ blog.title }}</h2>
+<p>{{blog.date}}</p>
 
 {% if blog.image_1 %}
 <p><img alt=" " src="/media/{{blog.image_1}}" /></p>

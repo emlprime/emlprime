@@ -3,13 +3,16 @@
 {% block content %}
 
 <div class="portfolio_image grid_2 prefix_2">
-  <img src="/media/images/laura.gif" alt="laura">
+  <img src="/media/images/laura.gif" alt="laura" />
 </div>
-<div id="portfolio" class="grid_4">
+<div class="portfolio grid_4">
   <h2>Laura's Website Portfolio</h2>
   <ul id="laura_portfolio">
     {% for object in portfolio %}
-    <li><a href="{{object.url}}" target="_BLANK"><h3>{{object.name}}</h3><img alt=" " src="/media/{{object.image}}" /></a></li>
+    <li>
+		<h3><a href="{{object.url}}">{{object.name}}</a></h3>
+		<a href="{{object.url}}"><img alt=" " src="/media/{{object.image}}" /></a>
+	</li>
     {% endfor %}
   </ul>
 <a href="/us/">Back</a>
