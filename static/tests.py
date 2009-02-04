@@ -122,10 +122,6 @@ class TestStatic(CommonTestCase):
             doc=alice.clicks_a_link("/us/%s/" % element)
             alice.sees_an_element(doc, id="portfolio")
             doc=alice.clicks_a_link("/us/")
-        # see __str__, img, type, dir, doc, and __dict__ in each person's section
-        elements += ["__str__", "img",  "type", "dir", "doc", ".__dict__"]
-        for element in elements:
-            alice.sees_an_element(doc, id=element)
         
 
 
