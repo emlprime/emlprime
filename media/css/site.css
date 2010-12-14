@@ -1,255 +1,97 @@
-*
-{
-				padding: 0;
-				margin: 0;
-				border: 0;
+body {
+    background: url(../images/main-bg.gif) #000 repeat-x top left;
+    font-size:62.5%;
+    font-family: Helvetica, Arial, Verdana, sans-serif;
+    color: #000;
 }
 
-
-h3
-{
-font-size: 1.2em;
+#container {
+    width: 709px;
+    height: 454px;
+    background: url(../images/bamboo-bg.jpg) no-repeat top left;
+    margin-top: 88px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    font-size: 1.2em;
 }
 
-#status_alert
-{
-margin-top: 4em;
+#content-wrap {
+    width: 709px;
+    height: 340px;
+    background: url(../images/content-box.png) no-repeat bottom left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
-/***************
-   blog and comic
-****************/
-
-#pagenation
-{
-margin-left: 2em;
-font-weight: bold;
-font-size: 1.1em;
+#header {
+    width: 709px;
+    height: 129px;
+    position: relative;
 }
 
-.blog
-{
-margin: 5em;
-border-top: 2px solid black;
-border-bottom: 2px solid black;
+#header h1 {
+    text-indent: -9999px;
+    background: url(../images/logo.png) no-repeat top left;
+    width: 392px;
+    height: 63px;
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
 }
 
-.blog h2
-{
-font-size: 1.4em;
+#content {
+    width: 432px;
+    height: 337px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: auto;
 }
 
-#comic a
-{
-font-size: 2em;
-margin: 1em;
-color: black;
+#content p.summary {
+    width: 365px;
 }
 
-#comic
-{
-  margin-bottom: 1em;
-  height: 730px;
-  position: relative;
+#content p {
+    width: 280px;
+    margin-left: 2em;
+    float: left;
 }
 
-#right_arrows
-{
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
+h2 {
+    font-size: 1.7em;
+    float: left;
+    clear: left;
+    width: 95px;
 }
 
-#left_arrows
-{
-  position: absolute;
-  left: 180px;
-  bottom: 10px;
+a {
+    color: #000;
+    text-decoration: underline;
 }
 
-
-/***************
-   footer and content
-****************/
-
-#footer a
-{
-text-decoration: none;
-color: black;
+a:hover {
+    text-decoration: none;
 }
 
-#footer span
-{
-margin-left: 20px;
-font-weight: bold;
+#footer  {
+    position: absolute;
+    top: 450px;
+    color: white;
+    width: 705px;
 }
 
-/***************
-   project form
-****************/
-
-#project_form
-{
-height: 220px;
-margin: auto;
-text-align: left;
-position: relative;
+#footer p {
+    width: 234px;
+    float: left;
 }
 
-#project_form label
-{
-float: left;
-text-align: right;
-font-weight: bold;
-margin-right: 10px;
-width: 80px;
+#footer p.phone {
+    text-align: center;
 }
 
-#project_form input
-{
-border: 1px solid black;
-}
-
-#project_form input.submit
-{
-border: none;
-}
-
-#project_form textarea
-{
-outline: 1px solid black;
-width: 280px;
-}
-
-#project_form_container
-{
-position: relative;
-margin-bottom: 100px;
-}
-
-#project_submit
-{
-position: relative;
-left: 150px;
-}
-
-#project_confirmation
-{
-height: 200px;
-margin-top: 50px;
-}
-
-#project_form p
-{
-clear: both;
-margin-bottom: 10px;
-}
-
-#project_form #id_name {
-position: absolute;
-top: -135px;
-left: 285px;
-width: 50px;
-}
-
-#project_form #id_email {
-position: absolute;
-top: -90px;
-left: 465px;
-width: 120px;
-}
-
-#project_form #id_description {
-position: absolute;
-top: -185px;
-left: 465px;
-width: 120px;
-height: 35px;
-}
-
-
-/***************
-   home, work, and us
-****************/
-
-.help_text
-{
-margin-top: 2em;
-}
-
-#scrum_intro
-{
-margin: 2em;
-}
-
-#peter_portfolio, #laura_portfolio
-{
-list-style-type: none;
-}
-
-#peter_portfolio li, #laura_portfolio li
-{
-margin-top: 1em;
-}
-
-#peter_portfolio a, #laura_portfolio a
-{
-color: black;
-font-size: 1em;
-}
-
-
-#peter, #laura
-{
-width: 200px;
-float: left;
-line-height: 1;
-}
-
-#laura
-{
-float: right;
-margin-right: 60px;
-}
-
-.projects
-{
-list-style-type: none;
-}
-
-#masthead
-{
-  height: 220px;
-}
-
-#navigation
-{
-  height: 91px;
-}
-
-#home_page_comic
-{
-height: 242px;
-}
-
-
-/***************
-   rates page
-****************/
-
-#invoice
-{
-list-style-type: none;
-font-size: 1.3em;
-}
-
-.price
-{
-outline: 1 px solid black;
-}
-
-#invoice li
-{
-text-align: center;
-margin: 0.5em;
+#footer p.copyright {
+    text-align: right;
 }
