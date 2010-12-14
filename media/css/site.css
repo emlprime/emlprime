@@ -52,19 +52,23 @@ body {
 
 #content p.summary {
     width: 365px;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 #content p {
     width: 280px;
     margin-left: 2em;
     float: left;
+    margin-top: 0px;
 }
 
 h2 {
-    font-size: 1.7em;
+    font-size: 1.5em;
     float: left;
     clear: left;
     width: 95px;
+    margin-top: 0px;
 }
 
 a {
